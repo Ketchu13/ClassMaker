@@ -23,704 +23,698 @@
         'Ne la modifiez pas à l'aide de l'éditeur de code.
         <DebuggerStepThrough()>
         Private Sub InitializeComponent()
-            TextBox1 = New TextBox()
-            TextBox2 = New TextBox()
-            Button1 = New Button()
-            TextBox3 = New TextBox()
-            TextBox4 = New TextBox()
-            Label1 = New Label()
-            Label2 = New Label()
-            Label3 = New Label()
-            Label4 = New Label()
-            TextBox5 = New TextBox()
-            Label5 = New Label()
-            Label6 = New Label()
-            CheckBox1 = New CheckBox()
-            CheckBox2 = New CheckBox()
-            CheckBox3 = New CheckBox()
-            CheckBox4 = New CheckBox()
-            Label7 = New Label()
-            TextBox6 = New TextBox()
-            Label8 = New Label()
-            CheckBox5 = New CheckBox()
-            Button2 = New Button()
-            Button3 = New Button()
-            Button4 = New Button()
-            Button5 = New Button()
-            CheckBox6 = New CheckBox()
-            CheckBox7 = New CheckBox()
-            CheckBox8 = New CheckBox()
-            CheckBox9 = New CheckBox()
-            CheckBox10 = New CheckBox()
-            CheckBox11 = New CheckBox()
-            CheckBox12 = New CheckBox()
-            CheckBox13 = New CheckBox()
-            CheckBox14 = New CheckBox()
-            CheckBox15 = New CheckBox()
-            GroupBox1 = New GroupBox()
-            Panel1 = New Panel()
-            GroupBox2 = New GroupBox()
-            ComboBox1 = New ComboBox()
-            MenuStrip1 = New MenuStrip()
-            FileToolStripMenuItem = New ToolStripMenuItem()
-            ExitToolStripMenuItem = New ToolStripMenuItem()
-            EditToolStripMenuItem = New ToolStripMenuItem()
-            UndoToolStripMenuItem = New ToolStripMenuItem()
-            RedoToolStripMenuItem = New ToolStripMenuItem()
-            ToolStripSeparator1 = New ToolStripSeparator()
-            CutToolStripMenuItem = New ToolStripMenuItem()
-            CopyToolStripMenuItem = New ToolStripMenuItem()
-            PasteToolStripMenuItem = New ToolStripMenuItem()
-            ToolStripSeparator2 = New ToolStripSeparator()
-            SelectAllToolStripMenuItem = New ToolStripMenuItem()
-            SelectNoneToolStripMenuItem = New ToolStripMenuItem()
-            ToolStripSeparator3 = New ToolStripSeparator()
-            ReplaceTabBy4SpacesToolStripMenuItem = New ToolStripMenuItem()
-            Replace4SpacesByTabToolStripMenuItem = New ToolStripMenuItem()
-            RemoveSpaceToolStripMenuItem = New ToolStripMenuItem()
-            RemoveSpaceAtTheEndOfLinesToolStripMenuItem = New ToolStripMenuItem()
-            ConfigToolStripMenuItem = New ToolStripMenuItem()
-            ToolsToolStripMenuItem = New ToolStripMenuItem()
-            HelpsToolStripMenuItem = New ToolStripMenuItem()
-            HowToToolStripMenuItem = New ToolStripMenuItem()
-            AboutToolStripMenuItem = New ToolStripMenuItem()
-            ToolStripMenuItem1 = New ToolStripMenuItem()
-            GroupBox1.SuspendLayout()
-            Panel1.SuspendLayout()
-            GroupBox2.SuspendLayout()
-            MenuStrip1.SuspendLayout()
-            SuspendLayout()
+            Me.TextBox1 = New System.Windows.Forms.TextBox()
+            Me.Button1 = New System.Windows.Forms.Button()
+            Me.TextBox3 = New System.Windows.Forms.TextBox()
+            Me.TextBox4 = New System.Windows.Forms.TextBox()
+            Me.Label1 = New System.Windows.Forms.Label()
+            Me.Label2 = New System.Windows.Forms.Label()
+            Me.Label3 = New System.Windows.Forms.Label()
+            Me.Label4 = New System.Windows.Forms.Label()
+            Me.TextBox5 = New System.Windows.Forms.TextBox()
+            Me.Label5 = New System.Windows.Forms.Label()
+            Me.Label6 = New System.Windows.Forms.Label()
+            Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+            Me.CheckBoxCreators = New System.Windows.Forms.CheckBox()
+            Me.CheckBoxFields = New System.Windows.Forms.CheckBox()
+            Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+            Me.Label7 = New System.Windows.Forms.Label()
+            Me.TextBox6 = New System.Windows.Forms.TextBox()
+            Me.Label8 = New System.Windows.Forms.Label()
+            Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+            Me.Button2 = New System.Windows.Forms.Button()
+            Me.Button3 = New System.Windows.Forms.Button()
+            Me.Button4 = New System.Windows.Forms.Button()
+            Me.Button5 = New System.Windows.Forms.Button()
+            Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox13 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+            Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+            Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+            Me.Panel1 = New System.Windows.Forms.Panel()
+            Me.TextBox2 = New System.Windows.Forms.RichTextBox()
+            Me.TreeView1 = New System.Windows.Forms.TreeView()
+            Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+            Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+            Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+            Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.UndoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.RedoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+            Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+            Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.SelectNoneToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+            Me.ReplaceTabBy4SpacesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.Replace4SpacesByTabToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.RemoveSpaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ConfigToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.HelpsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.HowToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.GroupBox1.SuspendLayout()
+            Me.Panel1.SuspendLayout()
+            Me.GroupBox2.SuspendLayout()
+            Me.SuspendLayout()
             '
             'TextBox1
             '
-            TextBox1.Anchor = CType(((AnchorStyles.Top Or AnchorStyles.Bottom) _
-            Or AnchorStyles.Left), AnchorStyles)
-            TextBox1.Location = New Point(6, 133)
-            TextBox1.Multiline = True
-            TextBox1.Name = "TextBox1"
-            TextBox1.Size = New Size(290, 68)
-            TextBox1.TabIndex = 0
-            TextBox1.Text = "Action#single" & ChrW(13) & ChrW(10) &
-                "ComplainNeedIdi#single" & ChrW(13) & ChrW(10) &
-                "ComplainNeedIdu#single" & ChrW(13) & ChrW(10) &
-                "Complaining#single" & ChrW(13) & ChrW(10) &
-                "Priority#single" & ChrW(13) & ChrW(10) &
-                "Size#single" & ChrW(13) & ChrW(10) &
-                "Targeti#single" & ChrW(13) & ChrW(10) &
-                "Targetu#single" & ChrW(13) & ChrW(10) & "Timer#single"
-            '
-            'TextBox2
-            '
-            TextBox2.Anchor = CType((((AnchorStyles.Top Or AnchorStyles.Bottom) _
-            Or AnchorStyles.Left) _
-            Or AnchorStyles.Right), AnchorStyles)
-            TextBox2.Location = New Point(308, 19)
-            TextBox2.Multiline = True
-            TextBox2.Name = "TextBox2"
-            TextBox2.ScrollBars = ScrollBars.Vertical
-            TextBox2.Size = New Size(513, 544)
-            TextBox2.TabIndex = 1
+            Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.TextBox1.Location = New System.Drawing.Point(6, 133)
+            Me.TextBox1.Multiline = True
+            Me.TextBox1.Name = "TextBox1"
+            Me.TextBox1.Size = New System.Drawing.Size(290, 68)
+            Me.TextBox1.TabIndex = 0
+            Me.TextBox1.Text = "Action#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdi#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Complaining#single" &
+    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Size#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targeti#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targetu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Timer#single"
             '
             'Button1
             '
-            Button1.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Right), AnchorStyles)
-            Button1.Location = New Point(308, 569)
-            Button1.Name = "Button1"
-            Button1.Size = New Size(95, 27)
-            Button1.TabIndex = 2
-            Button1.Text = "Write Class"
-            Button1.UseVisualStyleBackColor = True
+            Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button1.Location = New System.Drawing.Point(308, 569)
+            Me.Button1.Name = "Button1"
+            Me.Button1.Size = New System.Drawing.Size(95, 27)
+            Me.Button1.TabIndex = 2
+            Me.Button1.Text = "Write Class"
+            Me.Button1.UseVisualStyleBackColor = True
             '
             'TextBox3
             '
-            TextBox3.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            TextBox3.Location = New Point(6, 238)
-            TextBox3.Multiline = True
-            TextBox3.Name = "TextBox3"
-            TextBox3.Size = New Size(290, 105)
-            TextBox3.TabIndex = 3
-            TextBox3.Text = "Targetu#single;Timer#single"
+            Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.TextBox3.Location = New System.Drawing.Point(6, 238)
+            Me.TextBox3.Multiline = True
+            Me.TextBox3.Name = "TextBox3"
+            Me.TextBox3.Size = New System.Drawing.Size(290, 105)
+            Me.TextBox3.TabIndex = 3
+            Me.TextBox3.Text = "Targetu#single;Timer#single"
             '
             'TextBox4
             '
-            TextBox4.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            TextBox4.Location = New Point(6, 379)
-            TextBox4.Name = "TextBox4"
-            TextBox4.Size = New Size(290, 20)
-            TextBox4.TabIndex = 4
-            TextBox4.Text = "Entity"
+            Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.TextBox4.Location = New System.Drawing.Point(6, 379)
+            Me.TextBox4.Name = "TextBox4"
+            Me.TextBox4.Size = New System.Drawing.Size(290, 20)
+            Me.TextBox4.TabIndex = 4
+            Me.TextBox4.Text = "Entity"
             '
             'Label1
             '
-            Label1.AutoSize = True
-            Label1.Location = New Point(3, 60)
-            Label1.Name = "Label1"
-            Label1.Size = New Size(34, 13)
-            Label1.TabIndex = 5
-            Label1.Text = "Fields"
+            Me.Label1.AutoSize = True
+            Me.Label1.Location = New System.Drawing.Point(3, 60)
+            Me.Label1.Name = "Label1"
+            Me.Label1.Size = New System.Drawing.Size(34, 13)
+            Me.Label1.TabIndex = 5
+            Me.Label1.Text = "Fields"
             '
             'Label2
             '
-            Label2.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            Label2.AutoSize = True
-            Label2.Location = New Point(3, 222)
-            Label2.Name = "Label2"
-            Label2.Size = New Size(85, 13)
-            Label2.TabIndex = 6
-            Label2.Text = "Fields for creator"
+            Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.Label2.AutoSize = True
+            Me.Label2.Location = New System.Drawing.Point(3, 222)
+            Me.Label2.Name = "Label2"
+            Me.Label2.Size = New System.Drawing.Size(85, 13)
+            Me.Label2.TabIndex = 6
+            Me.Label2.Text = "Fields for creator"
             '
             'Label3
             '
-            Label3.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            Label3.AutoSize = True
-            Label3.Location = New Point(3, 363)
-            Label3.Name = "Label3"
-            Label3.Size = New Size(59, 13)
-            Label3.TabIndex = 7
-            Label3.Text = "Inherit from"
+            Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.Label3.AutoSize = True
+            Me.Label3.Location = New System.Drawing.Point(3, 363)
+            Me.Label3.Name = "Label3"
+            Me.Label3.Size = New System.Drawing.Size(59, 13)
+            Me.Label3.TabIndex = 7
+            Me.Label3.Text = "Inherit from"
             '
             'Label4
             '
-            Label4.AutoSize = True
-            Label4.Location = New Point(302, 3)
-            Label4.Name = "Label4"
-            Label4.Size = New Size(80, 13)
-            Label4.TabIndex = 8
-            Label4.Text = "Your new Class"
+            Me.Label4.AutoSize = True
+            Me.Label4.Location = New System.Drawing.Point(302, 3)
+            Me.Label4.Name = "Label4"
+            Me.Label4.Size = New System.Drawing.Size(80, 13)
+            Me.Label4.TabIndex = 8
+            Me.Label4.Text = "Your new Class"
             '
             'TextBox5
             '
-            TextBox5.Location = New Point(6, 76)
-            TextBox5.Name = "TextBox5"
-            TextBox5.Size = New Size(290, 20)
-            TextBox5.TabIndex = 9
-            TextBox5.Text = "Prisoner"
+            Me.TextBox5.Location = New System.Drawing.Point(6, 76)
+            Me.TextBox5.Name = "TextBox5"
+            Me.TextBox5.Size = New System.Drawing.Size(290, 20)
+            Me.TextBox5.TabIndex = 9
+            Me.TextBox5.Text = "Prisoner"
             '
             'Label5
             '
-            Label5.AutoSize = True
-            Label5.Location = New Point(3, 60)
-            Label5.Name = "Label5"
-            Label5.Size = New Size(63, 13)
-            Label5.TabIndex = 10
-            Label5.Text = "Class Name"
+            Me.Label5.AutoSize = True
+            Me.Label5.Location = New System.Drawing.Point(3, 60)
+            Me.Label5.Name = "Label5"
+            Me.Label5.Size = New System.Drawing.Size(63, 13)
+            Me.Label5.TabIndex = 10
+            Me.Label5.Text = "Class Name"
             '
             'Label6
             '
-            Label6.AutoSize = True
-            Label6.ImeMode = ImeMode.NoControl
-            Label6.Location = New Point(3, 117)
-            Label6.Name = "Label6"
-            Label6.Size = New Size(34, 13)
-            Label6.TabIndex = 11
-            Label6.Text = "Fields"
+            Me.Label6.AutoSize = True
+            Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label6.Location = New System.Drawing.Point(3, 117)
+            Me.Label6.Name = "Label6"
+            Me.Label6.Size = New System.Drawing.Size(34, 13)
+            Me.Label6.TabIndex = 11
+            Me.Label6.Text = "Fields"
             '
             'CheckBox1
             '
-            CheckBox1.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            CheckBox1.AutoSize = True
-            CheckBox1.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox1.Location = New Point(236, 405)
-            CheckBox1.Name = "CheckBox1"
-            CheckBox1.Size = New Size(60, 17)
-            CheckBox1.TabIndex = 12
-            CheckBox1.Text = "Inherits"
-            CheckBox1.UseVisualStyleBackColor = True
+            Me.CheckBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.CheckBox1.AutoSize = True
+            Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox1.Location = New System.Drawing.Point(236, 405)
+            Me.CheckBox1.Name = "CheckBox1"
+            Me.CheckBox1.Size = New System.Drawing.Size(60, 17)
+            Me.CheckBox1.TabIndex = 12
+            Me.CheckBox1.Text = "Inherits"
+            Me.CheckBox1.UseVisualStyleBackColor = True
             '
-            'CheckBox2
+            'CheckBoxCreators
             '
-            CheckBox2.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            CheckBox2.AutoSize = True
-            CheckBox2.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox2.ImeMode = ImeMode.NoControl
-            CheckBox2.Location = New Point(204, 349)
-            CheckBox2.Name = "CheckBox2"
-            CheckBox2.Size = New Size(92, 17)
-            CheckBox2.TabIndex = 13
-            CheckBox2.Text = "Add creator(s)"
-            CheckBox2.UseVisualStyleBackColor = True
+            Me.CheckBoxCreators.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.CheckBoxCreators.AutoSize = True
+            Me.CheckBoxCreators.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBoxCreators.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBoxCreators.Location = New System.Drawing.Point(204, 349)
+            Me.CheckBoxCreators.Name = "CheckBoxCreators"
+            Me.CheckBoxCreators.Size = New System.Drawing.Size(92, 17)
+            Me.CheckBoxCreators.TabIndex = 13
+            Me.CheckBoxCreators.Text = "Add creator(s)"
+            Me.CheckBoxCreators.UseVisualStyleBackColor = True
             '
-            'CheckBox3
+            'CheckBoxFields
             '
-            CheckBox3.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            CheckBox3.AutoSize = True
-            CheckBox3.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox3.ImeMode = ImeMode.NoControl
-            CheckBox3.Location = New Point(199, 207)
-            CheckBox3.Name = "CheckBox3"
-            CheckBox3.Size = New Size(97, 17)
-            CheckBox3.TabIndex = 14
-            CheckBox3.Text = "Generate fields"
-            CheckBox3.UseVisualStyleBackColor = True
+            Me.CheckBoxFields.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.CheckBoxFields.AutoSize = True
+            Me.CheckBoxFields.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBoxFields.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBoxFields.Location = New System.Drawing.Point(199, 207)
+            Me.CheckBoxFields.Name = "CheckBoxFields"
+            Me.CheckBoxFields.Size = New System.Drawing.Size(97, 17)
+            Me.CheckBoxFields.TabIndex = 14
+            Me.CheckBoxFields.Text = "Generate fields"
+            Me.CheckBoxFields.UseVisualStyleBackColor = True
             '
             'CheckBox4
             '
-            CheckBox4.AutoSize = True
-            CheckBox4.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox4.ImeMode = ImeMode.NoControl
-            CheckBox4.Location = New Point(176, 102)
-            CheckBox4.Name = "CheckBox4"
-            CheckBox4.Size = New Size(120, 17)
-            CheckBox4.TabIndex = 15
-            CheckBox4.Text = "Use this class name"
-            CheckBox4.UseVisualStyleBackColor = True
+            Me.CheckBox4.AutoSize = True
+            Me.CheckBox4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox4.Location = New System.Drawing.Point(176, 102)
+            Me.CheckBox4.Name = "CheckBox4"
+            Me.CheckBox4.Size = New System.Drawing.Size(120, 17)
+            Me.CheckBox4.TabIndex = 15
+            Me.CheckBox4.Text = "Use this class name"
+            Me.CheckBox4.UseVisualStyleBackColor = True
             '
             'Label7
             '
-            Label7.AutoSize = True
-            Label7.ImeMode = ImeMode.NoControl
-            Label7.Location = New Point(3, 3)
-            Label7.Name = "Label7"
-            Label7.Size = New Size(64, 13)
-            Label7.TabIndex = 18
-            Label7.Text = "Namespace"
+            Me.Label7.AutoSize = True
+            Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label7.Location = New System.Drawing.Point(3, 3)
+            Me.Label7.Name = "Label7"
+            Me.Label7.Size = New System.Drawing.Size(64, 13)
+            Me.Label7.TabIndex = 18
+            Me.Label7.Text = "Namespace"
             '
             'TextBox6
             '
-            TextBox6.Location = New Point(6, 19)
-            TextBox6.Name = "TextBox6"
-            TextBox6.Size = New Size(290, 20)
-            TextBox6.TabIndex = 17
-            TextBox6.Text = "PrisonArchitectManager"
+            Me.TextBox6.Location = New System.Drawing.Point(6, 19)
+            Me.TextBox6.Name = "TextBox6"
+            Me.TextBox6.Size = New System.Drawing.Size(290, 20)
+            Me.TextBox6.TabIndex = 17
+            Me.TextBox6.Text = "PrisonArchitectManager"
             '
             'Label8
             '
-            Label8.AutoSize = True
-            Label8.ImeMode = ImeMode.NoControl
-            Label8.Location = New Point(3, 3)
-            Label8.Name = "Label8"
-            Label8.Size = New Size(34, 13)
-            Label8.TabIndex = 16
-            Label8.Text = "Fields"
+            Me.Label8.AutoSize = True
+            Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Label8.Location = New System.Drawing.Point(3, 3)
+            Me.Label8.Name = "Label8"
+            Me.Label8.Size = New System.Drawing.Size(34, 13)
+            Me.Label8.TabIndex = 16
+            Me.Label8.Text = "Fields"
             '
             'CheckBox5
             '
-            CheckBox5.AutoSize = True
-            CheckBox5.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox5.ImeMode = ImeMode.NoControl
-            CheckBox5.Location = New Point(172, 45)
-            CheckBox5.Name = "CheckBox5"
-            CheckBox5.Size = New Size(124, 17)
-            CheckBox5.TabIndex = 19
-            CheckBox5.Text = "Use this Namespace"
-            CheckBox5.UseVisualStyleBackColor = True
+            Me.CheckBox5.AutoSize = True
+            Me.CheckBox5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox5.Location = New System.Drawing.Point(172, 45)
+            Me.CheckBox5.Name = "CheckBox5"
+            Me.CheckBox5.Size = New System.Drawing.Size(124, 17)
+            Me.CheckBox5.TabIndex = 19
+            Me.CheckBox5.Text = "Use this Namespace"
+            Me.CheckBox5.UseVisualStyleBackColor = True
             '
             'Button2
             '
-            Button2.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Right), AnchorStyles)
-            Button2.ImeMode = ImeMode.NoControl
-            Button2.Location = New Point(726, 569)
-            Button2.Name = "Button2"
-            Button2.Size = New Size(95, 27)
-            Button2.TabIndex = 2
-            Button2.Text = "Save Class"
-            Button2.UseVisualStyleBackColor = True
+            Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Button2.Location = New System.Drawing.Point(726, 569)
+            Me.Button2.Name = "Button2"
+            Me.Button2.Size = New System.Drawing.Size(95, 27)
+            Me.Button2.TabIndex = 2
+            Me.Button2.Text = "Save Class"
+            Me.Button2.UseVisualStyleBackColor = True
             '
             'Button3
             '
-            Button3.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Right), AnchorStyles)
-            Button3.ImeMode = ImeMode.NoControl
-            Button3.Location = New Point(409, 569)
-            Button3.Name = "Button3"
-            Button3.Size = New Size(95, 27)
-            Button3.TabIndex = 2
-            Button3.Text = "Select All"
-            Button3.UseVisualStyleBackColor = True
+            Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Button3.Location = New System.Drawing.Point(409, 569)
+            Me.Button3.Name = "Button3"
+            Me.Button3.Size = New System.Drawing.Size(95, 27)
+            Me.Button3.TabIndex = 2
+            Me.Button3.Text = "Select All"
+            Me.Button3.UseVisualStyleBackColor = True
             '
             'Button4
             '
-            Button4.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Right), AnchorStyles)
-            Button4.ImeMode = ImeMode.NoControl
-            Button4.Location = New Point(510, 569)
-            Button4.Name = "Button4"
-            Button4.Size = New Size(102, 27)
-            Button4.TabIndex = 20
-            Button4.Text = "Copy to Clipboard"
-            Button4.UseVisualStyleBackColor = True
+            Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Button4.Location = New System.Drawing.Point(510, 569)
+            Me.Button4.Name = "Button4"
+            Me.Button4.Size = New System.Drawing.Size(102, 27)
+            Me.Button4.TabIndex = 20
+            Me.Button4.Text = "Copy to Clipboard"
+            Me.Button4.UseVisualStyleBackColor = True
             '
             'Button5
             '
-            Button5.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Right), AnchorStyles)
-            Button5.ImeMode = ImeMode.NoControl
-            Button5.Location = New Point(618, 569)
-            Button5.Name = "Button5"
-            Button5.Size = New Size(102, 27)
-            Button5.TabIndex = 21
-            Button5.Text = "Open Class in V.S"
-            Button5.UseVisualStyleBackColor = True
+            Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.Button5.Location = New System.Drawing.Point(618, 569)
+            Me.Button5.Name = "Button5"
+            Me.Button5.Size = New System.Drawing.Size(102, 27)
+            Me.Button5.TabIndex = 21
+            Me.Button5.Text = "Open Class in V.S"
+            Me.Button5.UseVisualStyleBackColor = True
             '
             'CheckBox6
             '
-            CheckBox6.AutoSize = True
-            CheckBox6.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox6.ImeMode = ImeMode.NoControl
-            CheckBox6.Location = New Point(59, 19)
-            CheckBox6.Name = "CheckBox6"
-            CheckBox6.Size = New Size(70, 17)
-            CheckBox6.TabIndex = 22
-            CheckBox6.Text = "Singleton"
-            CheckBox6.UseVisualStyleBackColor = True
+            Me.CheckBox6.AutoSize = True
+            Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox6.Location = New System.Drawing.Point(59, 19)
+            Me.CheckBox6.Name = "CheckBox6"
+            Me.CheckBox6.Size = New System.Drawing.Size(70, 17)
+            Me.CheckBox6.TabIndex = 22
+            Me.CheckBox6.Text = "Singleton"
+            Me.CheckBox6.UseVisualStyleBackColor = True
             '
             'CheckBox7
             '
-            CheckBox7.AutoSize = True
-            CheckBox7.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox7.ImeMode = ImeMode.NoControl
-            CheckBox7.Location = New Point(29, 42)
-            CheckBox7.Name = "CheckBox7"
-            CheckBox7.Size = New Size(100, 17)
-            CheckBox7.TabIndex = 23
-            CheckBox7.Text = "Factory Method"
-            CheckBox7.UseVisualStyleBackColor = True
+            Me.CheckBox7.AutoSize = True
+            Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox7.Location = New System.Drawing.Point(29, 42)
+            Me.CheckBox7.Name = "CheckBox7"
+            Me.CheckBox7.Size = New System.Drawing.Size(100, 17)
+            Me.CheckBox7.TabIndex = 23
+            Me.CheckBox7.Text = "Factory Method"
+            Me.CheckBox7.UseVisualStyleBackColor = True
             '
             'CheckBox8
             '
-            CheckBox8.AutoSize = True
-            CheckBox8.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox8.ImeMode = ImeMode.NoControl
-            CheckBox8.Location = New Point(26, 65)
-            CheckBox8.Name = "CheckBox8"
-            CheckBox8.Size = New Size(103, 17)
-            CheckBox8.TabIndex = 24
-            CheckBox8.Text = "Abstract Factory"
-            CheckBox8.UseVisualStyleBackColor = True
+            Me.CheckBox8.AutoSize = True
+            Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox8.Location = New System.Drawing.Point(26, 65)
+            Me.CheckBox8.Name = "CheckBox8"
+            Me.CheckBox8.Size = New System.Drawing.Size(103, 17)
+            Me.CheckBox8.TabIndex = 24
+            Me.CheckBox8.Text = "Abstract Factory"
+            Me.CheckBox8.UseVisualStyleBackColor = True
             '
             'CheckBox9
             '
-            CheckBox9.AutoSize = True
-            CheckBox9.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox9.ImeMode = ImeMode.NoControl
-            CheckBox9.Location = New Point(94, 88)
-            CheckBox9.Name = "CheckBox9"
-            CheckBox9.Size = New Size(35, 17)
-            CheckBox9.TabIndex = 25
-            CheckBox9.Text = "..."
-            CheckBox9.UseVisualStyleBackColor = True
+            Me.CheckBox9.AutoSize = True
+            Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox9.Location = New System.Drawing.Point(94, 88)
+            Me.CheckBox9.Name = "CheckBox9"
+            Me.CheckBox9.Size = New System.Drawing.Size(35, 17)
+            Me.CheckBox9.TabIndex = 25
+            Me.CheckBox9.Text = "..."
+            Me.CheckBox9.UseVisualStyleBackColor = True
             '
             'CheckBox10
             '
-            CheckBox10.AutoSize = True
-            CheckBox10.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox10.ImeMode = ImeMode.NoControl
-            CheckBox10.Location = New Point(193, 65)
-            CheckBox10.Name = "CheckBox10"
-            CheckBox10.Size = New Size(35, 17)
-            CheckBox10.TabIndex = 26
-            CheckBox10.Text = "..."
-            CheckBox10.UseVisualStyleBackColor = True
+            Me.CheckBox10.AutoSize = True
+            Me.CheckBox10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox10.Location = New System.Drawing.Point(193, 65)
+            Me.CheckBox10.Name = "CheckBox10"
+            Me.CheckBox10.Size = New System.Drawing.Size(35, 17)
+            Me.CheckBox10.TabIndex = 26
+            Me.CheckBox10.Text = "..."
+            Me.CheckBox10.UseVisualStyleBackColor = True
             '
             'CheckBox11
             '
-            CheckBox11.AutoSize = True
-            CheckBox11.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox11.ImeMode = ImeMode.NoControl
-            CheckBox11.Location = New Point(159, 42)
-            CheckBox11.Name = "CheckBox11"
-            CheckBox11.Size = New Size(69, 17)
-            CheckBox11.TabIndex = 27
-            CheckBox11.Text = "Observer"
-            CheckBox11.UseVisualStyleBackColor = True
+            Me.CheckBox11.AutoSize = True
+            Me.CheckBox11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox11.Location = New System.Drawing.Point(159, 42)
+            Me.CheckBox11.Name = "CheckBox11"
+            Me.CheckBox11.Size = New System.Drawing.Size(69, 17)
+            Me.CheckBox11.TabIndex = 27
+            Me.CheckBox11.Text = "Observer"
+            Me.CheckBox11.UseVisualStyleBackColor = True
             '
             'CheckBox12
             '
-            CheckBox12.AutoSize = True
-            CheckBox12.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox12.ImeMode = ImeMode.NoControl
-            CheckBox12.Location = New Point(176, 19)
-            CheckBox12.Name = "CheckBox12"
-            CheckBox12.Size = New Size(52, 17)
-            CheckBox12.TabIndex = 28
-            CheckBox12.Text = "Proxy"
-            CheckBox12.UseVisualStyleBackColor = True
+            Me.CheckBox12.AutoSize = True
+            Me.CheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox12.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox12.Location = New System.Drawing.Point(176, 19)
+            Me.CheckBox12.Name = "CheckBox12"
+            Me.CheckBox12.Size = New System.Drawing.Size(52, 17)
+            Me.CheckBox12.TabIndex = 28
+            Me.CheckBox12.Text = "Proxy"
+            Me.CheckBox12.UseVisualStyleBackColor = True
             '
             'CheckBox13
             '
-            CheckBox13.AutoSize = True
-            CheckBox13.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox13.ImeMode = ImeMode.NoControl
-            CheckBox13.Location = New Point(193, 88)
-            CheckBox13.Name = "CheckBox13"
-            CheckBox13.Size = New Size(35, 17)
-            CheckBox13.TabIndex = 29
-            CheckBox13.Text = "..."
-            CheckBox13.UseVisualStyleBackColor = True
+            Me.CheckBox13.AutoSize = True
+            Me.CheckBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox13.Location = New System.Drawing.Point(193, 88)
+            Me.CheckBox13.Name = "CheckBox13"
+            Me.CheckBox13.Size = New System.Drawing.Size(35, 17)
+            Me.CheckBox13.TabIndex = 29
+            Me.CheckBox13.Text = "..."
+            Me.CheckBox13.UseVisualStyleBackColor = True
             '
             'CheckBox14
             '
-            CheckBox14.AutoSize = True
-            CheckBox14.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox14.ImeMode = ImeMode.NoControl
-            CheckBox14.Location = New Point(94, 111)
-            CheckBox14.Name = "CheckBox14"
-            CheckBox14.Size = New Size(35, 17)
-            CheckBox14.TabIndex = 25
-            CheckBox14.Text = "..."
-            CheckBox14.UseVisualStyleBackColor = True
+            Me.CheckBox14.AutoSize = True
+            Me.CheckBox14.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox14.Location = New System.Drawing.Point(94, 111)
+            Me.CheckBox14.Name = "CheckBox14"
+            Me.CheckBox14.Size = New System.Drawing.Size(35, 17)
+            Me.CheckBox14.TabIndex = 25
+            Me.CheckBox14.Text = "..."
+            Me.CheckBox14.UseVisualStyleBackColor = True
             '
             'CheckBox15
             '
-            CheckBox15.AutoSize = True
-            CheckBox15.CheckAlign = ContentAlignment.MiddleRight
-            CheckBox15.ImeMode = ImeMode.NoControl
-            CheckBox15.Location = New Point(193, 111)
-            CheckBox15.Name = "CheckBox15"
-            CheckBox15.Size = New Size(35, 17)
-            CheckBox15.TabIndex = 29
-            CheckBox15.Text = "..."
-            CheckBox15.UseVisualStyleBackColor = True
+            Me.CheckBox15.AutoSize = True
+            Me.CheckBox15.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+            Me.CheckBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
+            Me.CheckBox15.Location = New System.Drawing.Point(193, 111)
+            Me.CheckBox15.Name = "CheckBox15"
+            Me.CheckBox15.Size = New System.Drawing.Size(35, 17)
+            Me.CheckBox15.TabIndex = 29
+            Me.CheckBox15.Text = "..."
+            Me.CheckBox15.UseVisualStyleBackColor = True
             '
             'GroupBox1
             '
-            GroupBox1.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            GroupBox1.Controls.Add(CheckBox15)
-            GroupBox1.Controls.Add(CheckBox13)
-            GroupBox1.Controls.Add(CheckBox12)
-            GroupBox1.Controls.Add(CheckBox11)
-            GroupBox1.Controls.Add(CheckBox14)
-            GroupBox1.Controls.Add(CheckBox10)
-            GroupBox1.Controls.Add(CheckBox9)
-            GroupBox1.Controls.Add(CheckBox8)
-            GroupBox1.Controls.Add(CheckBox7)
-            GroupBox1.Controls.Add(CheckBox6)
-            GroupBox1.Location = New Point(6, 419)
-            GroupBox1.Name = "GroupBox1"
-            GroupBox1.Size = New Size(296, 132)
-            GroupBox1.TabIndex = 30
-            GroupBox1.TabStop = False
-            GroupBox1.Text = "Design Patterns"
+            Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.GroupBox1.Controls.Add(Me.CheckBox15)
+            Me.GroupBox1.Controls.Add(Me.CheckBox13)
+            Me.GroupBox1.Controls.Add(Me.CheckBox12)
+            Me.GroupBox1.Controls.Add(Me.CheckBox11)
+            Me.GroupBox1.Controls.Add(Me.CheckBox14)
+            Me.GroupBox1.Controls.Add(Me.CheckBox10)
+            Me.GroupBox1.Controls.Add(Me.CheckBox9)
+            Me.GroupBox1.Controls.Add(Me.CheckBox8)
+            Me.GroupBox1.Controls.Add(Me.CheckBox7)
+            Me.GroupBox1.Controls.Add(Me.CheckBox6)
+            Me.GroupBox1.Location = New System.Drawing.Point(6, 419)
+            Me.GroupBox1.Name = "GroupBox1"
+            Me.GroupBox1.Size = New System.Drawing.Size(296, 132)
+            Me.GroupBox1.TabIndex = 30
+            Me.GroupBox1.TabStop = False
+            Me.GroupBox1.Text = "Design Patterns"
             '
             'Panel1
             '
-            Panel1.Anchor = CType((((AnchorStyles.Top Or AnchorStyles.Bottom) _
-            Or AnchorStyles.Left) _
-            Or AnchorStyles.Right), AnchorStyles)
-            Panel1.BackColor = SystemColors.AppWorkspace
-            Panel1.Controls.Add(GroupBox2)
-            Panel1.Controls.Add(GroupBox1)
-            Panel1.Controls.Add(Button5)
-            Panel1.Controls.Add(Button4)
-            Panel1.Controls.Add(CheckBox5)
-            Panel1.Controls.Add(Label7)
-            Panel1.Controls.Add(TextBox6)
-            Panel1.Controls.Add(Label8)
-            Panel1.Controls.Add(CheckBox4)
-            Panel1.Controls.Add(CheckBox3)
-            Panel1.Controls.Add(CheckBox2)
-            Panel1.Controls.Add(CheckBox1)
-            Panel1.Controls.Add(Label6)
-            Panel1.Controls.Add(Label5)
-            Panel1.Controls.Add(TextBox5)
-            Panel1.Controls.Add(Label4)
-            Panel1.Controls.Add(Label3)
-            Panel1.Controls.Add(Label2)
-            Panel1.Controls.Add(Label1)
-            Panel1.Controls.Add(TextBox4)
-            Panel1.Controls.Add(TextBox3)
-            Panel1.Controls.Add(Button2)
-            Panel1.Controls.Add(Button3)
-            Panel1.Controls.Add(Button1)
-            Panel1.Controls.Add(TextBox2)
-            Panel1.Controls.Add(TextBox1)
-            Panel1.Location = New Point(0, 25)
-            Panel1.Name = "Panel1"
-            Panel1.Size = New Size(827, 605)
-            Panel1.TabIndex = 31
+            Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+            Me.Panel1.Controls.Add(Me.TextBox2)
+            Me.Panel1.Controls.Add(Me.TreeView1)
+            Me.Panel1.Controls.Add(Me.GroupBox2)
+            Me.Panel1.Controls.Add(Me.GroupBox1)
+            Me.Panel1.Controls.Add(Me.Button5)
+            Me.Panel1.Controls.Add(Me.Button4)
+            Me.Panel1.Controls.Add(Me.CheckBox5)
+            Me.Panel1.Controls.Add(Me.Label7)
+            Me.Panel1.Controls.Add(Me.TextBox6)
+            Me.Panel1.Controls.Add(Me.Label8)
+            Me.Panel1.Controls.Add(Me.CheckBox4)
+            Me.Panel1.Controls.Add(Me.CheckBoxFields)
+            Me.Panel1.Controls.Add(Me.CheckBoxCreators)
+            Me.Panel1.Controls.Add(Me.CheckBox1)
+            Me.Panel1.Controls.Add(Me.Label6)
+            Me.Panel1.Controls.Add(Me.Label5)
+            Me.Panel1.Controls.Add(Me.TextBox5)
+            Me.Panel1.Controls.Add(Me.Label4)
+            Me.Panel1.Controls.Add(Me.Label3)
+            Me.Panel1.Controls.Add(Me.Label2)
+            Me.Panel1.Controls.Add(Me.Label1)
+            Me.Panel1.Controls.Add(Me.TextBox4)
+            Me.Panel1.Controls.Add(Me.TextBox3)
+            Me.Panel1.Controls.Add(Me.Button2)
+            Me.Panel1.Controls.Add(Me.Button3)
+            Me.Panel1.Controls.Add(Me.Button1)
+            Me.Panel1.Controls.Add(Me.TextBox1)
+            Me.Panel1.Location = New System.Drawing.Point(0, 25)
+            Me.Panel1.Name = "Panel1"
+            Me.Panel1.Size = New System.Drawing.Size(827, 605)
+            Me.Panel1.TabIndex = 31
+            '
+            'TextBox2
+            '
+            Me.TextBox2.Location = New System.Drawing.Point(309, 19)
+            Me.TextBox2.Name = "TextBox2"
+            Me.TextBox2.Size = New System.Drawing.Size(512, 544)
+            Me.TextBox2.TabIndex = 33
+            Me.TextBox2.Text = ""
+            '
+            'TreeView1
+            '
+            Me.TreeView1.Location = New System.Drawing.Point(309, 438)
+            Me.TreeView1.Name = "TreeView1"
+            Me.TreeView1.Size = New System.Drawing.Size(512, 125)
+            Me.TreeView1.TabIndex = 32
             '
             'GroupBox2
             '
-            GroupBox2.Anchor = CType((AnchorStyles.Bottom Or AnchorStyles.Left), AnchorStyles)
-            GroupBox2.Controls.Add(ComboBox1)
-            GroupBox2.Location = New Point(6, 553)
-            GroupBox2.Name = "GroupBox2"
-            GroupBox2.Size = New Size(297, 46)
-            GroupBox2.TabIndex = 31
-            GroupBox2.TabStop = False
-            GroupBox2.Text = "Language"
+            Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.GroupBox2.Controls.Add(Me.ComboBox1)
+            Me.GroupBox2.Location = New System.Drawing.Point(6, 553)
+            Me.GroupBox2.Name = "GroupBox2"
+            Me.GroupBox2.Size = New System.Drawing.Size(297, 46)
+            Me.GroupBox2.TabIndex = 31
+            Me.GroupBox2.TabStop = False
+            Me.GroupBox2.Text = "Language"
             '
             'ComboBox1
             '
-            ComboBox1.FlatStyle = FlatStyle.Flat
-            ComboBox1.FormattingEnabled = True
-            ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php"})
-            ComboBox1.Location = New Point(94, 19)
-            ComboBox1.Name = "ComboBox1"
-            ComboBox1.Size = New Size(111, 21)
-            ComboBox1.TabIndex = 0
-            ComboBox1.Text = "VBNet"
+            Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+            Me.ComboBox1.FormattingEnabled = True
+            Me.ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php"})
+            Me.ComboBox1.Location = New System.Drawing.Point(94, 19)
+            Me.ComboBox1.Name = "ComboBox1"
+            Me.ComboBox1.Size = New System.Drawing.Size(111, 21)
+            Me.ComboBox1.TabIndex = 0
+            Me.ComboBox1.Text = "VBNet"
             '
             'MenuStrip1
             '
-            MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem, EditToolStripMenuItem, ConfigToolStripMenuItem, ToolsToolStripMenuItem, HelpsToolStripMenuItem, ToolStripMenuItem1})
-            MenuStrip1.Location = New Point(0, 0)
-            MenuStrip1.Name = "MenuStrip1"
-            MenuStrip1.Size = New Size(827, 24)
-            MenuStrip1.TabIndex = 32
-            MenuStrip1.Text = "MenuStrip1"
+            Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+            Me.MenuStrip1.Name = "MenuStrip1"
+            Me.MenuStrip1.Size = New System.Drawing.Size(827, 24)
+            Me.MenuStrip1.TabIndex = 32
+            Me.MenuStrip1.Text = "MenuStrip1"
             '
             'FileToolStripMenuItem
             '
-            FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ExitToolStripMenuItem})
-            FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-            FileToolStripMenuItem.Size = New Size(37, 20)
-            FileToolStripMenuItem.Text = "&File"
+            Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+            Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+            Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+            Me.FileToolStripMenuItem.Text = "&File"
             '
             'ExitToolStripMenuItem
             '
-            ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-            ExitToolStripMenuItem.Size = New Size(92, 22)
-            ExitToolStripMenuItem.Text = "&Exit"
+            Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+            Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
+            Me.ExitToolStripMenuItem.Text = "&Exit"
             '
             'EditToolStripMenuItem
             '
-            EditToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {UndoToolStripMenuItem, RedoToolStripMenuItem, ToolStripSeparator1, CutToolStripMenuItem, CopyToolStripMenuItem, PasteToolStripMenuItem, ToolStripSeparator2, SelectAllToolStripMenuItem, SelectNoneToolStripMenuItem, ToolStripSeparator3, ReplaceTabBy4SpacesToolStripMenuItem, Replace4SpacesByTabToolStripMenuItem, RemoveSpaceToolStripMenuItem, RemoveSpaceAtTheEndOfLinesToolStripMenuItem})
-            EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-            EditToolStripMenuItem.Size = New Size(39, 20)
-            EditToolStripMenuItem.Text = "&Edit"
+            Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UndoToolStripMenuItem, Me.RedoToolStripMenuItem, Me.ToolStripSeparator1, Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem, Me.ToolStripSeparator2, Me.SelectAllToolStripMenuItem, Me.SelectNoneToolStripMenuItem, Me.ToolStripSeparator3, Me.ReplaceTabBy4SpacesToolStripMenuItem, Me.Replace4SpacesByTabToolStripMenuItem, Me.RemoveSpaceToolStripMenuItem, Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem})
+            Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
+            Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+            Me.EditToolStripMenuItem.Text = "&Edit"
             '
             'UndoToolStripMenuItem
             '
-            UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
-            UndoToolStripMenuItem.Size = New Size(263, 22)
-            UndoToolStripMenuItem.Text = "&Undo.."
+            Me.UndoToolStripMenuItem.Name = "UndoToolStripMenuItem"
+            Me.UndoToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.UndoToolStripMenuItem.Text = "&Undo.."
             '
             'RedoToolStripMenuItem
             '
-            RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
-            RedoToolStripMenuItem.Size = New Size(263, 22)
-            RedoToolStripMenuItem.Text = "&Redo.."
+            Me.RedoToolStripMenuItem.Name = "RedoToolStripMenuItem"
+            Me.RedoToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.RedoToolStripMenuItem.Text = "&Redo.."
             '
             'ToolStripSeparator1
             '
-            ToolStripSeparator1.Name = "ToolStripSeparator1"
-            ToolStripSeparator1.Size = New Size(260, 6)
+            Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+            Me.ToolStripSeparator1.Size = New System.Drawing.Size(260, 6)
             '
             'CutToolStripMenuItem
             '
-            CutToolStripMenuItem.Name = "CutToolStripMenuItem"
-            CutToolStripMenuItem.Size = New Size(263, 22)
-            CutToolStripMenuItem.Text = "&Cut.."
+            Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+            Me.CutToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.CutToolStripMenuItem.Text = "&Cut.."
             '
             'CopyToolStripMenuItem
             '
-            CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
-            CopyToolStripMenuItem.Size = New Size(263, 22)
-            CopyToolStripMenuItem.Text = "C&opy.."
+            Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+            Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.CopyToolStripMenuItem.Text = "C&opy.."
             '
             'PasteToolStripMenuItem
             '
-            PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
-            PasteToolStripMenuItem.Size = New Size(263, 22)
-            PasteToolStripMenuItem.Text = "&Paste.."
+            Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+            Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.PasteToolStripMenuItem.Text = "&Paste.."
             '
             'ToolStripSeparator2
             '
-            ToolStripSeparator2.Name = "ToolStripSeparator2"
-            ToolStripSeparator2.Size = New Size(260, 6)
+            Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+            Me.ToolStripSeparator2.Size = New System.Drawing.Size(260, 6)
             '
             'SelectAllToolStripMenuItem
             '
-            SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
-            SelectAllToolStripMenuItem.Size = New Size(263, 22)
-            SelectAllToolStripMenuItem.Text = "Select &All.."
+            Me.SelectAllToolStripMenuItem.Name = "SelectAllToolStripMenuItem"
+            Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.SelectAllToolStripMenuItem.Text = "Select &All.."
             '
             'SelectNoneToolStripMenuItem
             '
-            SelectNoneToolStripMenuItem.Name = "SelectNoneToolStripMenuItem"
-            SelectNoneToolStripMenuItem.Size = New Size(263, 22)
-            SelectNoneToolStripMenuItem.Text = "Select none.."
+            Me.SelectNoneToolStripMenuItem.Name = "SelectNoneToolStripMenuItem"
+            Me.SelectNoneToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.SelectNoneToolStripMenuItem.Text = "Select none.."
             '
             'ToolStripSeparator3
             '
-            ToolStripSeparator3.Name = "ToolStripSeparator3"
-            ToolStripSeparator3.Size = New Size(260, 6)
+            Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+            Me.ToolStripSeparator3.Size = New System.Drawing.Size(260, 6)
             '
             'ReplaceTabBy4SpacesToolStripMenuItem
             '
-            ReplaceTabBy4SpacesToolStripMenuItem.Name = "ReplaceTabBy4SpacesToolStripMenuItem"
-            ReplaceTabBy4SpacesToolStripMenuItem.Size = New Size(263, 22)
-            ReplaceTabBy4SpacesToolStripMenuItem.Text = "Re&place Tab by 4 spaces.."
+            Me.ReplaceTabBy4SpacesToolStripMenuItem.Name = "ReplaceTabBy4SpacesToolStripMenuItem"
+            Me.ReplaceTabBy4SpacesToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.ReplaceTabBy4SpacesToolStripMenuItem.Text = "Re&place Tab by 4 spaces.."
             '
             'Replace4SpacesByTabToolStripMenuItem
             '
-            Replace4SpacesByTabToolStripMenuItem.Name = "Replace4SpacesByTabToolStripMenuItem"
-            Replace4SpacesByTabToolStripMenuItem.Size = New Size(263, 22)
-            Replace4SpacesByTabToolStripMenuItem.Text = "Rep&lace 4 spaces by Tab.."
+            Me.Replace4SpacesByTabToolStripMenuItem.Name = "Replace4SpacesByTabToolStripMenuItem"
+            Me.Replace4SpacesByTabToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.Replace4SpacesByTabToolStripMenuItem.Text = "Rep&lace 4 spaces by Tab.."
             '
             'RemoveSpaceToolStripMenuItem
             '
-            RemoveSpaceToolStripMenuItem.Name = "RemoveSpaceToolStripMenuItem"
-            RemoveSpaceToolStripMenuItem.Size = New Size(263, 22)
-            RemoveSpaceToolStripMenuItem.Text = "Re&move space at the begin of lines.."
+            Me.RemoveSpaceToolStripMenuItem.Name = "RemoveSpaceToolStripMenuItem"
+            Me.RemoveSpaceToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.RemoveSpaceToolStripMenuItem.Text = "Re&move space at the begin of lines.."
             '
             'RemoveSpaceAtTheEndOfLinesToolStripMenuItem
             '
-            RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Name = "RemoveSpaceAtTheEndOfLinesToolStripMenuItem"
-            RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Size = New Size(263, 22)
-            RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Text = "Re&move space at the end of lines.."
+            Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Name = "RemoveSpaceAtTheEndOfLinesToolStripMenuItem"
+            Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Size = New System.Drawing.Size(263, 22)
+            Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Text = "Re&move space at the end of lines.."
             '
             'ConfigToolStripMenuItem
             '
-            ConfigToolStripMenuItem.Name = "ConfigToolStripMenuItem"
-            ConfigToolStripMenuItem.Size = New Size(55, 20)
-            ConfigToolStripMenuItem.Text = "&Config"
+            Me.ConfigToolStripMenuItem.Name = "ConfigToolStripMenuItem"
+            Me.ConfigToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+            Me.ConfigToolStripMenuItem.Text = "&Config"
             '
             'ToolsToolStripMenuItem
             '
-            ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-            ToolsToolStripMenuItem.Size = New Size(48, 20)
-            ToolsToolStripMenuItem.Text = "&Tools"
+            Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+            Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+            Me.ToolsToolStripMenuItem.Text = "&Tools"
             '
             'HelpsToolStripMenuItem
             '
-            HelpsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {HowToToolStripMenuItem, AboutToolStripMenuItem})
-            HelpsToolStripMenuItem.Name = "HelpsToolStripMenuItem"
-            HelpsToolStripMenuItem.Size = New Size(49, 20)
-            HelpsToolStripMenuItem.Text = "&Helps"
+            Me.HelpsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowToToolStripMenuItem, Me.AboutToolStripMenuItem})
+            Me.HelpsToolStripMenuItem.Name = "HelpsToolStripMenuItem"
+            Me.HelpsToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
+            Me.HelpsToolStripMenuItem.Text = "&Helps"
             '
             'HowToToolStripMenuItem
             '
-            HowToToolStripMenuItem.Name = "HowToToolStripMenuItem"
-            HowToToolStripMenuItem.Size = New Size(119, 22)
-            HowToToolStripMenuItem.Text = "&How to.."
+            Me.HowToToolStripMenuItem.Name = "HowToToolStripMenuItem"
+            Me.HowToToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+            Me.HowToToolStripMenuItem.Text = "&How to.."
             '
             'AboutToolStripMenuItem
             '
-            AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-            AboutToolStripMenuItem.Size = New Size(119, 22)
-            AboutToolStripMenuItem.Text = "&About.."
+            Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
+            Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+            Me.AboutToolStripMenuItem.Text = "&About.."
             '
             'ToolStripMenuItem1
             '
-            ToolStripMenuItem1.Alignment = ToolStripItemAlignment.Right
-            ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-            ToolStripMenuItem1.Size = New Size(24, 20)
-            ToolStripMenuItem1.Text = "?"
+            Me.ToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+            Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+            Me.ToolStripMenuItem1.Size = New System.Drawing.Size(24, 20)
+            Me.ToolStripMenuItem1.Text = "?"
             '
             'FormMain
             '
-            AutoScaleDimensions = New SizeF(6.0!, 13.0!)
-            AutoScaleMode = AutoScaleMode.Font
-            BackColor = Color.Black
-            ClientSize = New Size(827, 630)
-            Controls.Add(Panel1)
-            Controls.Add(MenuStrip1)
-            MainMenuStrip = MenuStrip1
-            MinimumSize = New Size(843, 668)
-            Name = "FormMain"
-            Text = "VB.Net Class Maker"
-            GroupBox1.ResumeLayout(False)
-            GroupBox1.PerformLayout()
-            Panel1.ResumeLayout(False)
-            Panel1.PerformLayout()
-            GroupBox2.ResumeLayout(False)
-            MenuStrip1.ResumeLayout(False)
-            MenuStrip1.PerformLayout()
-            ResumeLayout(False)
-            PerformLayout()
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+            Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+            Me.BackColor = System.Drawing.Color.Black
+            Me.ClientSize = New System.Drawing.Size(827, 630)
+            Me.Controls.Add(Me.Panel1)
+            Me.Controls.Add(Me.MenuStrip1)
+            Me.MainMenuStrip = Me.MenuStrip1
+            Me.MinimumSize = New System.Drawing.Size(843, 668)
+            Me.Name = "FormMain"
+            Me.Text = "VB.Net Class Maker"
+            Me.GroupBox1.ResumeLayout(False)
+            Me.GroupBox1.PerformLayout()
+            Me.Panel1.ResumeLayout(False)
+            Me.Panel1.PerformLayout()
+            Me.GroupBox2.ResumeLayout(False)
+            Me.ResumeLayout(False)
+            Me.PerformLayout()
 
         End Sub
         Friend WithEvents TextBox1 As TextBox
-        Friend WithEvents TextBox2 As TextBox
         Friend WithEvents Button1 As Button
         Friend WithEvents TextBox3 As TextBox
         Friend WithEvents TextBox4 As TextBox
@@ -732,8 +726,8 @@
         Friend WithEvents Label5 As Label
         Friend WithEvents Label6 As Label
         Friend WithEvents CheckBox1 As CheckBox
-        Friend WithEvents CheckBox2 As CheckBox
-        Friend WithEvents CheckBox3 As CheckBox
+        Friend WithEvents CheckBoxCreators As CheckBox
+        Friend WithEvents CheckBoxFields As CheckBox
         Friend WithEvents CheckBox4 As CheckBox
         Friend WithEvents Label7 As Label
         Friend WithEvents TextBox6 As TextBox
@@ -781,5 +775,7 @@
         Friend WithEvents RemoveSpaceAtTheEndOfLinesToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents HowToToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents TreeView1 As TreeView
+        Friend WithEvents TextBox2 As RichTextBox
     End Class
 End Namespace
