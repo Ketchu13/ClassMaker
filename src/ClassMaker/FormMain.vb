@@ -35,6 +35,9 @@ Namespace ClassMakerVBNet
                         "import sys" & vbCrLf &
                         "import os" & vbCrLf & vbCrLf
 
+                Case Language.Java
+
+
                 Case Language.Php
                     'todo   
 
@@ -52,12 +55,12 @@ Namespace ClassMakerVBNet
                     End If
                     header &= vbTab & "Public Class " & TextBox5.Text & vbCrLf
                     If CheckBox1.Checked = True Then
-                        header &= vbTab & vbTab & vbTab & "Inherits " & TextBox4.Text & vbCrLf & vbCrLf
+                        header &= vbTab & vbTab & "Inherits " & TextBox4.Text & vbCrLf & vbCrLf
                     End If
 
                 Case Language.CSharp
                     If isNamespace Then
-                        header = "Namespace " & TextBox6.Text & "{" & vbCrLf
+                        header = "Namespace " & TextBox6.Text & " {" & vbCrLf
                     End If
                     header &= vbTab & "public Class " & TextBox5.Text
                     If CheckBox1.Checked = True Then
@@ -72,6 +75,16 @@ Namespace ClassMakerVBNet
                     Else
                         header &= "(object):" & vbCrLf
                     End If
+                Case Language.Java
+                    If isNamespace Then
+                        header = "package " & TextBox6.Text & ";" & vbCrLf
+                    End If
+                    header &= vbTab & "public Class " & TextBox5.Text
+                    If CheckBox1.Checked = True Then
+                        header &= " extends " & TextBox4.Text
+                    End If
+                    header &= " {" & vbCrLf & vbCrLf
+
 
                 Case Language.Php
                     'todo
@@ -79,7 +92,7 @@ Namespace ClassMakerVBNet
             End Select
 
             Return header
-        End Function
+        End Function 'header
         Public Function WriteFields(ByVal thisLang As Language, ByVal thisFields() As String) As String
             Dim fields As String = Nothing
 
@@ -99,10 +112,13 @@ Namespace ClassMakerVBNet
                         fields &= vbTab & vbTab & "Private me" & varName & " as " & thisType & vbCrLf
 
                     Case Language.CSharp
-                        fields &= vbTab & vbTab & "Private " & thisType & " me" & varName & ";" & vbCrLf
+                        thisType = thisType.ToLower
+                        fields &= vbTab & vbTab & "private " & thisType & " me" & varName & ";" & vbCrLf
 
                     Case Language.Python
                         'todo  
+                    Case Language.Java
+                        fields &= vbTab & vbTab & "private " & thisType & " me" & varName & ";" & vbCrLf
 
                     Case Language.Php
                         fields = Nothing
@@ -111,7 +127,7 @@ Namespace ClassMakerVBNet
             Next
 
             Return fields & vbCrLf
-        End Function
+        End Function 'fields
         Public Function WriteProperties(ByVal thisLang As Language, ByVal thisFields() As String) As String
             Dim properties As String = Nothing
 
@@ -148,6 +164,17 @@ Namespace ClassMakerVBNet
 
                     Case Language.Python
                         'todo  
+                    Case Language.Java
+                        thisType = Replace(thisType, "Boolean", "boolean")
+                        thisType = Replace(thisType, "Integer", "int")
+                        thisType = Replace(thisType, "single", "float")
+                        thisType = Replace(thisType, "Object", "Object")
+                        properties &= vbTab & vbTab & "public final " & thisType & " get" & varName & "() {" & vbCrLf &
+                            vbTab & vbTab & vbTab & " return me" & varName & ";" & vbCrLf & vbTab & vbTab & " }" & vbCrLf &
+                            vbTab & vbTab & "public final " & thisType & " set" & varName & "(" & thisType & " value) {" & vbCrLf &
+                            vbTab & vbTab & vbTab & " me" & varName & " = value;" & vbCrLf &
+                            vbTab & vbTab & " }" & vbCrLf & vbCrLf
+
 
                     Case Language.Php
                         properties = Nothing
@@ -164,19 +191,22 @@ Namespace ClassMakerVBNet
                 Case Language.VBNet
                     If isNamespace Then
                         footer &= vbTab & vbTab & "End Class" & vbCrLf
-                        footer &= vbTab & "End Namespace" & vbCrLf
+                        footer &= "End Namespace" & vbCrLf
                     Else
                         footer &= vbTab & "End Class" & vbCrLf
                     End If
 
                 Case Language.CSharp
                     If isNamespace Then
-                        footer &= vbTab & vbTab & "}" & vbCrLf
+                        footer &= vbTab & "}" & vbCrLf
                     End If
-                    footer &= vbTab & "}" & vbCrLf
+                    footer &= "}" & vbCrLf
 
                 Case Language.Python
                     'todo  
+
+                Case Language.Java
+                    footer &= "}" & vbCrLf
 
                 Case Language.Php
                     footer = Nothing
@@ -208,6 +238,9 @@ Namespace ClassMakerVBNet
 
                     Case Language.Python
                         header = vbTab & "def __init__(self,"
+
+                    Case Language.Java
+                        header &= vbTab & vbTab & "public " & TextBox5.Text & "("
 
                     Case Language.Php
                         'todo   
@@ -258,6 +291,13 @@ Namespace ClassMakerVBNet
                                 header &= "):" & vbCrLf
                             End If
 
+                        Case Language.Java
+                            header &= varType & " this" & varName
+                            content &= vbTab & vbTab & vbTab & "me" & varName & " = this" & varName & ";" & vbCrLf
+                            If j >= UBound(strType) Then
+                                header &= ") {" & vbCrLf
+                            End If
+
                         Case Language.Php
                             'todo   
 
@@ -277,6 +317,9 @@ Namespace ClassMakerVBNet
 
                     Case Language.Python
                         'todo   
+
+                    Case Language.Java
+                        footer = vbTab & vbTab & "}" & vbCrLf & vbCrLf
 
                     Case Language.Php
                         'todo   
@@ -302,7 +345,7 @@ Namespace ClassMakerVBNet
             If CheckBoxFields.Checked = True Then
                 str &= WriteProperties(lang, str1)
             End If
-            str = WriteFooter(lang, CheckBox5.Checked)
+            str &= WriteFooter(lang, CheckBox5.Checked)
             TextBox2.Text = str
         End Sub
         Private Sub SetToClipboard(ByVal value As Object)
@@ -519,8 +562,4 @@ Namespace ClassMakerVBNet
 #End Region
 
     End Class
-
-
-
-
 End Namespace

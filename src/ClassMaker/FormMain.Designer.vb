@@ -81,14 +81,16 @@
             Me.RemoveSpaceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.RemoveSpaceAtTheEndOfLinesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ConfigToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-            Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.HelpsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.HowToToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
             Me.GroupBox1.SuspendLayout()
             Me.Panel1.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
+            Me.MenuStrip1.SuspendLayout()
             Me.SuspendLayout()
             '
             'TextBox1
@@ -100,8 +102,8 @@
             Me.TextBox1.Name = "TextBox1"
             Me.TextBox1.Size = New System.Drawing.Size(290, 68)
             Me.TextBox1.TabIndex = 0
-            Me.TextBox1.Text = "Action#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdi#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Complaining#single" &
-    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Size#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targeti#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targetu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Timer#single"
+            Me.TextBox1.Text = "Action#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdi#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdu#Integer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Complaining#Doubl" &
+    "e" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority#Boolean" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Size#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targeti#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targetu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Timer#single"
             '
             'Button1
             '
@@ -539,7 +541,7 @@
             '
             Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
             Me.ComboBox1.FormattingEnabled = True
-            Me.ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php"})
+            Me.ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php", "Cpp", "Java", "Arduino_C", "Arduino_Java"})
             Me.ComboBox1.Location = New System.Drawing.Point(94, 19)
             Me.ComboBox1.Name = "ComboBox1"
             Me.ComboBox1.Size = New System.Drawing.Size(111, 21)
@@ -548,6 +550,7 @@
             '
             'MenuStrip1
             '
+            Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ConfigToolStripMenuItem, Me.HelpsToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ToolStripMenuItem1})
             Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
             Me.MenuStrip1.Name = "MenuStrip1"
             Me.MenuStrip1.Size = New System.Drawing.Size(827, 24)
@@ -564,7 +567,7 @@
             'ExitToolStripMenuItem
             '
             Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-            Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(92, 22)
+            Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
             Me.ExitToolStripMenuItem.Text = "&Exit"
             '
             'EditToolStripMenuItem
@@ -661,12 +664,6 @@
             Me.ConfigToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
             Me.ConfigToolStripMenuItem.Text = "&Config"
             '
-            'ToolsToolStripMenuItem
-            '
-            Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-            Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
-            Me.ToolsToolStripMenuItem.Text = "&Tools"
-            '
             'HelpsToolStripMenuItem
             '
             Me.HelpsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HowToToolStripMenuItem, Me.AboutToolStripMenuItem})
@@ -677,14 +674,20 @@
             'HowToToolStripMenuItem
             '
             Me.HowToToolStripMenuItem.Name = "HowToToolStripMenuItem"
-            Me.HowToToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+            Me.HowToToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
             Me.HowToToolStripMenuItem.Text = "&How to.."
             '
             'AboutToolStripMenuItem
             '
             Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-            Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
+            Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
             Me.AboutToolStripMenuItem.Text = "&About.."
+            '
+            'ToolsToolStripMenuItem
+            '
+            Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+            Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+            Me.ToolsToolStripMenuItem.Text = "&Tools"
             '
             'ToolStripMenuItem1
             '
@@ -692,6 +695,12 @@
             Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
             Me.ToolStripMenuItem1.Size = New System.Drawing.Size(24, 20)
             Me.ToolStripMenuItem1.Text = "?"
+            '
+            'ToolStripMenuItem2
+            '
+            Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+            Me.ToolStripMenuItem2.Size = New System.Drawing.Size(25, 20)
+            Me.ToolStripMenuItem2.Text = "8"
             '
             'FormMain
             '
@@ -710,6 +719,8 @@
             Me.Panel1.ResumeLayout(False)
             Me.Panel1.PerformLayout()
             Me.GroupBox2.ResumeLayout(False)
+            Me.MenuStrip1.ResumeLayout(False)
+            Me.MenuStrip1.PerformLayout()
             Me.ResumeLayout(False)
             Me.PerformLayout()
 
@@ -777,5 +788,6 @@
         Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents TreeView1 As TreeView
         Friend WithEvents TextBox2 As RichTextBox
+        Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     End Class
 End Namespace
