@@ -5,6 +5,14 @@ Create easily and quickly your new classes (Namespace, inherits, implement..  Fi
 # First Preview with VB.Net language:
 ![alt tag](https://raw.github.com/Ketchu13/ClassMaker/master/Preview_Screens/2015-10-22 00.59.38.png)
 
+# New Previews with VB.Net language:
+![alt tag](https://raw.github.com/Ketchu13/ClassMaker/master/Preview_Screens/2015-10-22 03.55.42.png)
+
+C# 
+![alt tag](https://raw.github.com/Ketchu13/ClassMaker/master/Preview_Screens/2015-10-22 03.56.01.png)
+
+Python
+![alt tag](https://raw.github.com/Ketchu13/ClassMaker/master/Preview_Screens/2015-10-22 03.56.12.png)
 
 # More features coming soon:
 - Console version.
