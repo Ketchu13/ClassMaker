@@ -22,7 +22,6 @@ Partial Class Form1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -59,6 +58,8 @@ Partial Class Form1
         Me.CheckBox15 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -66,206 +67,387 @@ Partial Class Form1
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        resources.ApplyResources(Me.TextBox1, "TextBox1")
+        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.Location = New System.Drawing.Point(6, 133)
+        Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(290, 68)
+        Me.TextBox1.TabIndex = 0
+        Me.TextBox1.Text = "Action#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdi#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Complaining#single" &
+    "" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Size#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targeti#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targetu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Timer#single"
         '
         'TextBox2
         '
-        resources.ApplyResources(Me.TextBox2, "TextBox2")
+        Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox2.Location = New System.Drawing.Point(308, 19)
+        Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox2.Size = New System.Drawing.Size(513, 544)
+        Me.TextBox2.TabIndex = 1
         '
         'Button1
         '
-        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(308, 569)
         Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(95, 27)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Write Class"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
-        resources.ApplyResources(Me.TextBox3, "TextBox3")
+        Me.TextBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox3.Location = New System.Drawing.Point(6, 238)
+        Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(290, 105)
+        Me.TextBox3.TabIndex = 3
+        Me.TextBox3.Text = "Targetu#single;Timer#single"
         '
         'TextBox4
         '
-        resources.ApplyResources(Me.TextBox4, "TextBox4")
+        Me.TextBox4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.TextBox4.Location = New System.Drawing.Point(6, 379)
         Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(290, 20)
+        Me.TextBox4.TabIndex = 4
+        Me.TextBox4.Text = "Entity"
         '
         'Label1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(3, 60)
         Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Fields"
         '
         'Label2
         '
-        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(3, 222)
         Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(85, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Fields for creator"
         '
         'Label3
         '
-        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 363)
         Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Inherit from"
         '
         'Label4
         '
-        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(302, 3)
         Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(80, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Your new Class"
         '
         'TextBox5
         '
-        resources.ApplyResources(Me.TextBox5, "TextBox5")
+        Me.TextBox5.Location = New System.Drawing.Point(6, 76)
         Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(290, 20)
+        Me.TextBox5.TabIndex = 9
+        Me.TextBox5.Text = "Prisoner"
         '
         'Label5
         '
-        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(3, 60)
         Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Class Name"
         '
         'Label6
         '
-        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.AutoSize = True
+        Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label6.Location = New System.Drawing.Point(3, 117)
         Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 13)
+        Me.Label6.TabIndex = 11
+        Me.Label6.Text = "Fields"
         '
         'CheckBox1
         '
-        resources.ApplyResources(Me.CheckBox1, "CheckBox1")
+        Me.CheckBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox1.Location = New System.Drawing.Point(236, 405)
         Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(60, 17)
+        Me.CheckBox1.TabIndex = 12
+        Me.CheckBox1.Text = "Inherits"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'CheckBox2
         '
-        resources.ApplyResources(Me.CheckBox2, "CheckBox2")
+        Me.CheckBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox2.Location = New System.Drawing.Point(204, 349)
         Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(92, 17)
+        Me.CheckBox2.TabIndex = 13
+        Me.CheckBox2.Text = "Add creator(s)"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox3
         '
-        resources.ApplyResources(Me.CheckBox3, "CheckBox3")
+        Me.CheckBox3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox3.Location = New System.Drawing.Point(199, 207)
         Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(97, 17)
+        Me.CheckBox3.TabIndex = 14
+        Me.CheckBox3.Text = "Generate fields"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox4
         '
-        resources.ApplyResources(Me.CheckBox4, "CheckBox4")
+        Me.CheckBox4.AutoSize = True
+        Me.CheckBox4.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox4.Location = New System.Drawing.Point(176, 102)
         Me.CheckBox4.Name = "CheckBox4"
+        Me.CheckBox4.Size = New System.Drawing.Size(120, 17)
+        Me.CheckBox4.TabIndex = 15
+        Me.CheckBox4.Text = "Use this class name"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'Label7
         '
-        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.AutoSize = True
+        Me.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label7.Location = New System.Drawing.Point(3, 3)
         Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(64, 13)
+        Me.Label7.TabIndex = 18
+        Me.Label7.Text = "Namespace"
         '
         'TextBox6
         '
-        resources.ApplyResources(Me.TextBox6, "TextBox6")
+        Me.TextBox6.Location = New System.Drawing.Point(6, 19)
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(290, 20)
+        Me.TextBox6.TabIndex = 17
+        Me.TextBox6.Text = "PrisonArchitectManager"
         '
         'Label8
         '
-        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.AutoSize = True
+        Me.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label8.Location = New System.Drawing.Point(3, 3)
         Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(34, 13)
+        Me.Label8.TabIndex = 16
+        Me.Label8.Text = "Fields"
         '
         'CheckBox5
         '
-        resources.ApplyResources(Me.CheckBox5, "CheckBox5")
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox5.Location = New System.Drawing.Point(172, 45)
         Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(124, 17)
+        Me.CheckBox5.TabIndex = 19
+        Me.CheckBox5.Text = "Use this Namespace"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button2.Location = New System.Drawing.Point(726, 569)
         Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(95, 27)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Save Class"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        resources.ApplyResources(Me.Button3, "Button3")
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button3.Location = New System.Drawing.Point(409, 569)
         Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(95, 27)
+        Me.Button3.TabIndex = 2
+        Me.Button3.Text = "Select All"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        resources.ApplyResources(Me.Button4, "Button4")
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button4.Location = New System.Drawing.Point(510, 569)
         Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(102, 27)
+        Me.Button4.TabIndex = 20
+        Me.Button4.Text = "Copy to Clipboard"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Button5
         '
-        resources.ApplyResources(Me.Button5, "Button5")
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button5.Location = New System.Drawing.Point(618, 569)
         Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(102, 27)
+        Me.Button5.TabIndex = 21
+        Me.Button5.Text = "Open Class in V.S"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'CheckBox6
         '
-        resources.ApplyResources(Me.CheckBox6, "CheckBox6")
+        Me.CheckBox6.AutoSize = True
+        Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox6.Location = New System.Drawing.Point(59, 19)
         Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(70, 17)
+        Me.CheckBox6.TabIndex = 22
+        Me.CheckBox6.Text = "Singleton"
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
         'CheckBox7
         '
-        resources.ApplyResources(Me.CheckBox7, "CheckBox7")
+        Me.CheckBox7.AutoSize = True
+        Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox7.Location = New System.Drawing.Point(29, 42)
         Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(100, 17)
+        Me.CheckBox7.TabIndex = 23
+        Me.CheckBox7.Text = "Factory Method"
         Me.CheckBox7.UseVisualStyleBackColor = True
         '
         'CheckBox8
         '
-        resources.ApplyResources(Me.CheckBox8, "CheckBox8")
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox8.Location = New System.Drawing.Point(26, 65)
         Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(103, 17)
+        Me.CheckBox8.TabIndex = 24
+        Me.CheckBox8.Text = "Abstract Factory"
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
         'CheckBox9
         '
-        resources.ApplyResources(Me.CheckBox9, "CheckBox9")
+        Me.CheckBox9.AutoSize = True
+        Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox9.Location = New System.Drawing.Point(94, 88)
         Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox9.TabIndex = 25
+        Me.CheckBox9.Text = "..."
         Me.CheckBox9.UseVisualStyleBackColor = True
         '
         'CheckBox10
         '
-        resources.ApplyResources(Me.CheckBox10, "CheckBox10")
+        Me.CheckBox10.AutoSize = True
+        Me.CheckBox10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox10.Location = New System.Drawing.Point(193, 65)
         Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox10.TabIndex = 26
+        Me.CheckBox10.Text = "..."
         Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'CheckBox11
         '
-        resources.ApplyResources(Me.CheckBox11, "CheckBox11")
+        Me.CheckBox11.AutoSize = True
+        Me.CheckBox11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox11.Location = New System.Drawing.Point(159, 42)
         Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(69, 17)
+        Me.CheckBox11.TabIndex = 27
+        Me.CheckBox11.Text = "Observer"
         Me.CheckBox11.UseVisualStyleBackColor = True
         '
         'CheckBox12
         '
-        resources.ApplyResources(Me.CheckBox12, "CheckBox12")
+        Me.CheckBox12.AutoSize = True
+        Me.CheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox12.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox12.Location = New System.Drawing.Point(176, 19)
         Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(52, 17)
+        Me.CheckBox12.TabIndex = 28
+        Me.CheckBox12.Text = "Proxy"
         Me.CheckBox12.UseVisualStyleBackColor = True
         '
         'CheckBox13
         '
-        resources.ApplyResources(Me.CheckBox13, "CheckBox13")
+        Me.CheckBox13.AutoSize = True
+        Me.CheckBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox13.Location = New System.Drawing.Point(193, 88)
         Me.CheckBox13.Name = "CheckBox13"
+        Me.CheckBox13.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox13.TabIndex = 29
+        Me.CheckBox13.Text = "..."
         Me.CheckBox13.UseVisualStyleBackColor = True
         '
         'CheckBox14
         '
-        resources.ApplyResources(Me.CheckBox14, "CheckBox14")
+        Me.CheckBox14.AutoSize = True
+        Me.CheckBox14.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox14.Location = New System.Drawing.Point(94, 111)
         Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox14.TabIndex = 25
+        Me.CheckBox14.Text = "..."
         Me.CheckBox14.UseVisualStyleBackColor = True
         '
         'CheckBox15
         '
-        resources.ApplyResources(Me.CheckBox15, "CheckBox15")
+        Me.CheckBox15.AutoSize = True
+        Me.CheckBox15.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox15.Location = New System.Drawing.Point(193, 111)
         Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox15.TabIndex = 29
+        Me.CheckBox15.Text = "..."
         Me.CheckBox15.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.CheckBox15)
         Me.GroupBox1.Controls.Add(Me.CheckBox13)
         Me.GroupBox1.Controls.Add(Me.CheckBox12)
@@ -276,12 +458,18 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.CheckBox8)
         Me.GroupBox1.Controls.Add(Me.CheckBox7)
         Me.GroupBox1.Controls.Add(Me.CheckBox6)
-        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 419)
         Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(296, 132)
+        Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Design Patterns"
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.GroupBox1)
@@ -309,76 +497,98 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox1)
-        resources.ApplyResources(Me.Panel1, "Panel1")
+        Me.Panel1.Location = New System.Drawing.Point(0, 25)
         Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(827, 605)
+        Me.Panel1.TabIndex = 31
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Location = New System.Drawing.Point(6, 553)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(297, 46)
+        Me.GroupBox2.TabIndex = 31
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Language"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php"})
+        Me.ComboBox1.Location = New System.Drawing.Point(94, 19)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(111, 21)
+        Me.ComboBox1.TabIndex = 0
+        Me.ComboBox1.Text = "VBNet"
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.ConfigToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpsToolStripMenuItem, Me.ToolStripMenuItem1})
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(827, 24)
+        Me.MenuStrip1.TabIndex = 32
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        resources.ApplyResources(Me.FileToolStripMenuItem, "FileToolStripMenuItem")
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "&File"
         '
         'EditToolStripMenuItem
         '
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        resources.ApplyResources(Me.EditToolStripMenuItem, "EditToolStripMenuItem")
+        Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
+        Me.EditToolStripMenuItem.Text = "&Edit"
         '
         'ConfigToolStripMenuItem
         '
         Me.ConfigToolStripMenuItem.Name = "ConfigToolStripMenuItem"
-        resources.ApplyResources(Me.ConfigToolStripMenuItem, "ConfigToolStripMenuItem")
+        Me.ConfigToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.ConfigToolStripMenuItem.Text = "&Config"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        resources.ApplyResources(Me.ToolsToolStripMenuItem, "ToolsToolStripMenuItem")
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.ToolsToolStripMenuItem.Text = "&Tools"
         '
         'HelpsToolStripMenuItem
         '
         Me.HelpsToolStripMenuItem.Name = "HelpsToolStripMenuItem"
-        resources.ApplyResources(Me.HelpsToolStripMenuItem, "HelpsToolStripMenuItem")
+        Me.HelpsToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
+        Me.HelpsToolStripMenuItem.Text = "&Helps"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        resources.ApplyResources(Me.ToolStripMenuItem1, "ToolStripMenuItem1")
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.TabStop = False
-        '
-        'ComboBox1
-        '
-        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1"), resources.GetString("ComboBox1.Items2"), resources.GetString("ComboBox1.Items3")})
-        Me.ComboBox1.Name = "ComboBox1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(24, 20)
+        Me.ToolStripMenuItem1.Text = "?"
         '
         'Form1
         '
-        resources.ApplyResources(Me, "$this")
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
+        Me.ClientSize = New System.Drawing.Size(827, 630)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MinimumSize = New System.Drawing.Size(843, 668)
         Me.Name = "Form1"
+        Me.Text = "VB.Net Class Maker"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
