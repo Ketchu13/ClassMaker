@@ -87,6 +87,15 @@
             Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
             Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+            Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.NewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ImportFromToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.XmlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.CsvToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.PythonDictToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+            Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
             Me.GroupBox1.SuspendLayout()
             Me.Panel1.SuspendLayout()
             Me.GroupBox2.SuspendLayout()
@@ -559,7 +568,7 @@
             '
             'FileToolStripMenuItem
             '
-            Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+            Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripMenuItem, Me.OpenToolStripMenuItem, Me.SaveToolStripMenuItem, Me.SaveAsToolStripMenuItem, Me.ImportFromToolStripMenuItem, Me.ExitToolStripMenuItem})
             Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
             Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
             Me.FileToolStripMenuItem.Text = "&File"
@@ -702,6 +711,61 @@
             Me.ToolStripMenuItem2.Size = New System.Drawing.Size(25, 20)
             Me.ToolStripMenuItem2.Text = "8"
             '
+            'SaveToolStripMenuItem
+            '
+            Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
+            Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.SaveToolStripMenuItem.Text = "&Save.."
+            '
+            'SaveAsToolStripMenuItem
+            '
+            Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
+            Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.SaveAsToolStripMenuItem.Text = "S&ave as.."
+            '
+            'OpenToolStripMenuItem
+            '
+            Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
+            Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.OpenToolStripMenuItem.Text = "Open.."
+            '
+            'NewToolStripMenuItem
+            '
+            Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
+            Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.NewToolStripMenuItem.Text = "&New.."
+            '
+            'ImportFromToolStripMenuItem
+            '
+            Me.ImportFromToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XmlToolStripMenuItem, Me.CsvToolStripMenuItem, Me.PythonDictToolStripMenuItem, Me.ToolStripMenuItem4})
+            Me.ImportFromToolStripMenuItem.Name = "ImportFromToolStripMenuItem"
+            Me.ImportFromToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.ImportFromToolStripMenuItem.Text = "Import from.."
+            '
+            'XmlToolStripMenuItem
+            '
+            Me.XmlToolStripMenuItem.Name = "XmlToolStripMenuItem"
+            Me.XmlToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.XmlToolStripMenuItem.Text = "Xml"
+            '
+            'CsvToolStripMenuItem
+            '
+            Me.CsvToolStripMenuItem.Name = "CsvToolStripMenuItem"
+            Me.CsvToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.CsvToolStripMenuItem.Text = "Csv"
+            '
+            'PythonDictToolStripMenuItem
+            '
+            Me.PythonDictToolStripMenuItem.Name = "PythonDictToolStripMenuItem"
+            Me.PythonDictToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.PythonDictToolStripMenuItem.Text = "Python dict"
+            '
+            'ToolStripMenuItem4
+            '
+            Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+            Me.ToolStripMenuItem4.Size = New System.Drawing.Size(152, 22)
+            Me.ToolStripMenuItem4.Text = "..."
+            '
             'FormMain
             '
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -789,5 +853,14 @@
         Friend WithEvents TreeView1 As TreeView
         Friend WithEvents TextBox2 As RichTextBox
         Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+        Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents SaveAsToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents ImportFromToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents XmlToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents CsvToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents PythonDictToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
     End Class
 End Namespace
