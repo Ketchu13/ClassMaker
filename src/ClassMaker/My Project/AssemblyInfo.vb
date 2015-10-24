@@ -11,8 +11,8 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("ClassMaker")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("ClassMaker")> 
-<Assembly: AssemblyCopyright("Copyright ©  2015")> 
+<Assembly: AssemblyProduct("ClassMaker")>
+<Assembly: AssemblyCopyright("Copyright ©  ketchu13 KFP 2015")>
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>

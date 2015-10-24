@@ -23,6 +23,7 @@
         'Ne la modifiez pas à l'aide de l'éditeur de code.
         <DebuggerStepThrough()>
         Private Sub InitializeComponent()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
             Me.FieldsTxt = New System.Windows.Forms.TextBox()
             Me.Button1 = New System.Windows.Forms.Button()
             Me.F4CreatorsTxt = New System.Windows.Forms.TextBox()
@@ -111,15 +112,15 @@
             Me.FieldsTxt.Location = New System.Drawing.Point(6, 182)
             Me.FieldsTxt.Multiline = True
             Me.FieldsTxt.Name = "FieldsTxt"
-            Me.FieldsTxt.Size = New System.Drawing.Size(297, 68)
+            Me.FieldsTxt.Size = New System.Drawing.Size(297, 166)
             Me.FieldsTxt.TabIndex = 0
             Me.FieldsTxt.Text = "Action#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdi#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "ComplainNeedIdu#Integer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Complaining#Doubl" &
     "e" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Priority#Boolean" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Size#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targeti#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Targetu#single" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Timer#single"
             '
             'Button1
             '
-            Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.Button1.Location = New System.Drawing.Point(308, 569)
+            Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+            Me.Button1.Location = New System.Drawing.Point(308, 667)
             Me.Button1.Name = "Button1"
             Me.Button1.Size = New System.Drawing.Size(95, 27)
             Me.Button1.TabIndex = 2
@@ -131,7 +132,7 @@
             Me.F4CreatorsTxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.F4CreatorsTxt.BackColor = System.Drawing.Color.Bisque
             Me.F4CreatorsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-            Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 287)
+            Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 385)
             Me.F4CreatorsTxt.Multiline = True
             Me.F4CreatorsTxt.Name = "F4CreatorsTxt"
             Me.F4CreatorsTxt.Size = New System.Drawing.Size(297, 105)
@@ -140,7 +141,6 @@
             '
             'InheritsTxt
             '
-            Me.InheritsTxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.InheritsTxt.BackColor = System.Drawing.Color.Bisque
             Me.InheritsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
             Me.InheritsTxt.Location = New System.Drawing.Point(6, 129)
@@ -162,7 +162,7 @@
             '
             Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.Label2.AutoSize = True
-            Me.Label2.Location = New System.Drawing.Point(3, 271)
+            Me.Label2.Location = New System.Drawing.Point(3, 369)
             Me.Label2.Name = "Label2"
             Me.Label2.Size = New System.Drawing.Size(85, 13)
             Me.Label2.TabIndex = 6
@@ -170,7 +170,6 @@
             '
             'Label3
             '
-            Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.Label3.AutoSize = True
             Me.Label3.Location = New System.Drawing.Point(3, 113)
             Me.Label3.Name = "Label3"
@@ -218,7 +217,6 @@
             '
             'CheckInherit
             '
-            Me.CheckInherit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.CheckInherit.AutoSize = True
             Me.CheckInherit.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
             Me.CheckInherit.Location = New System.Drawing.Point(243, 155)
@@ -236,7 +234,7 @@
             Me.CheckBoxCreators.Checked = True
             Me.CheckBoxCreators.CheckState = System.Windows.Forms.CheckState.Checked
             Me.CheckBoxCreators.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.CheckBoxCreators.Location = New System.Drawing.Point(211, 398)
+            Me.CheckBoxCreators.Location = New System.Drawing.Point(211, 496)
             Me.CheckBoxCreators.Name = "CheckBoxCreators"
             Me.CheckBoxCreators.Size = New System.Drawing.Size(92, 17)
             Me.CheckBoxCreators.TabIndex = 13
@@ -251,7 +249,7 @@
             Me.CheckBoxFields.Checked = True
             Me.CheckBoxFields.CheckState = System.Windows.Forms.CheckState.Checked
             Me.CheckBoxFields.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.CheckBoxFields.Location = New System.Drawing.Point(206, 256)
+            Me.CheckBoxFields.Location = New System.Drawing.Point(206, 354)
             Me.CheckBoxFields.Name = "CheckBoxFields"
             Me.CheckBoxFields.Size = New System.Drawing.Size(97, 17)
             Me.CheckBoxFields.TabIndex = 14
@@ -320,7 +318,7 @@
             '
             Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Button2.Location = New System.Drawing.Point(726, 569)
+            Me.Button2.Location = New System.Drawing.Point(726, 667)
             Me.Button2.Name = "Button2"
             Me.Button2.Size = New System.Drawing.Size(95, 27)
             Me.Button2.TabIndex = 2
@@ -329,9 +327,9 @@
             '
             'Button3
             '
-            Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Button3.Location = New System.Drawing.Point(409, 569)
+            Me.Button3.Location = New System.Drawing.Point(409, 667)
             Me.Button3.Name = "Button3"
             Me.Button3.Size = New System.Drawing.Size(95, 27)
             Me.Button3.TabIndex = 2
@@ -340,9 +338,10 @@
             '
             'Button4
             '
-            Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Me.Button4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Button4.Location = New System.Drawing.Point(510, 569)
+            Me.Button4.Location = New System.Drawing.Point(510, 667)
             Me.Button4.Name = "Button4"
             Me.Button4.Size = New System.Drawing.Size(102, 27)
             Me.Button4.TabIndex = 20
@@ -354,7 +353,7 @@
             Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Button5.Enabled = False
             Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-            Me.Button5.Location = New System.Drawing.Point(618, 569)
+            Me.Button5.Location = New System.Drawing.Point(618, 667)
             Me.Button5.Name = "Button5"
             Me.Button5.Size = New System.Drawing.Size(102, 27)
             Me.Button5.TabIndex = 21
@@ -494,7 +493,8 @@
             Me.GroupBox1.Controls.Add(Me.CheckBox8)
             Me.GroupBox1.Controls.Add(Me.CheckBox7)
             Me.GroupBox1.Controls.Add(Me.CheckBox6)
-            Me.GroupBox1.Location = New System.Drawing.Point(6, 419)
+            Me.GroupBox1.Enabled = False
+            Me.GroupBox1.Location = New System.Drawing.Point(6, 517)
             Me.GroupBox1.Name = "GroupBox1"
             Me.GroupBox1.Size = New System.Drawing.Size(296, 132)
             Me.GroupBox1.TabIndex = 30
@@ -536,7 +536,7 @@
             Me.Panel1.Controls.Add(Me.FieldsTxt)
             Me.Panel1.Location = New System.Drawing.Point(0, 25)
             Me.Panel1.Name = "Panel1"
-            Me.Panel1.Size = New System.Drawing.Size(827, 605)
+            Me.Panel1.Size = New System.Drawing.Size(827, 703)
             Me.Panel1.TabIndex = 31
             '
             'TextBox2
@@ -552,7 +552,7 @@
             Me.TextBox2.Location = New System.Drawing.Point(309, 19)
             Me.TextBox2.Name = "TextBox2"
             Me.TextBox2.ShowSelectionMargin = True
-            Me.TextBox2.Size = New System.Drawing.Size(512, 544)
+            Me.TextBox2.Size = New System.Drawing.Size(512, 642)
             Me.TextBox2.TabIndex = 33
             Me.TextBox2.Text = ""
             '
@@ -567,7 +567,7 @@
             '
             Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
             Me.GroupBox2.Controls.Add(Me.ComboBox1)
-            Me.GroupBox2.Location = New System.Drawing.Point(6, 553)
+            Me.GroupBox2.Location = New System.Drawing.Point(6, 651)
             Me.GroupBox2.Name = "GroupBox2"
             Me.GroupBox2.Size = New System.Drawing.Size(297, 46)
             Me.GroupBox2.TabIndex = 31
@@ -774,14 +774,14 @@
             '
             Me.HowToToolStripMenuItem.Enabled = False
             Me.HowToToolStripMenuItem.Name = "HowToToolStripMenuItem"
-            Me.HowToToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.HowToToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
             Me.HowToToolStripMenuItem.Text = "&How to.."
             '
             'AboutToolStripMenuItem
             '
             Me.AboutToolStripMenuItem.Enabled = False
             Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-            Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+            Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(119, 22)
             Me.AboutToolStripMenuItem.Text = "&About.."
             '
             'ToolsToolStripMenuItem
@@ -810,13 +810,14 @@
             Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
             Me.BackColor = System.Drawing.Color.Black
-            Me.ClientSize = New System.Drawing.Size(827, 630)
+            Me.ClientSize = New System.Drawing.Size(827, 728)
             Me.Controls.Add(Me.Panel1)
             Me.Controls.Add(Me.MenuStrip1)
+            Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
             Me.MainMenuStrip = Me.MenuStrip1
             Me.MinimumSize = New System.Drawing.Size(843, 668)
             Me.Name = "FormMain"
-            Me.Text = "VB.Net Class Maker"
+            Me.Text = "Class Maker  |  A0.0.1 #"
             Me.GroupBox1.ResumeLayout(False)
             Me.GroupBox1.PerformLayout()
             Me.Panel1.ResumeLayout(False)

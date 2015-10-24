@@ -53,7 +53,9 @@
         Me.NamespaceSrc = thisNamespaceSrc
         Me.ClassNameSrc = thisClassNameSrc
         Me.InheritSrc = thisInheritSrc
+
         Me.CurrentFields = thisCurrentFields
+        Me.CreatorFields = thisCreatorFields
 
         Me.meCurrentDesignPat = thisCurrentDesignPat 'todo 
 
@@ -61,7 +63,6 @@
         Me.IsNamespaceRqd = thisIsNamespaceRqd
         Me.CheckBoxFields = thisCheckBoxFields
         Me.CheckBoxCreators = thisCheckBoxCreators
-        Me.CreatorFields = thisCreatorFields
 
     End Sub
 #End Region
