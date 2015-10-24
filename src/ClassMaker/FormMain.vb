@@ -3,369 +3,108 @@
 Namespace ClassMakerVBNet
     Public Class FormMain
 
-        Public Enum Language
-            VBNet = 0
-            CSharp = 1
-            Python = 2
-            Php = 3
-            Cpp = 4
-            Java = 5
-            Arduino_C = 6
-            Arduino_Java = 7
-        End Enum
-
-        Public Function WriteImports(ByVal lang As Language) As String
-            Dim importStr As String = Nothing
-
-            Select Case lang
-
-                Case Language.VBNet
-                    importStr = "Imports System.Collections.Generic" & vbCrLf &
-                           "Imports System.Drawing" & vbCrLf &
-                           "Imports System.IO" & vbCrLf & vbCrLf
-
-                Case Language.CSharp
-                    importStr = "using System.Collections.Generic;" & vbCrLf &
-                           "using System.Drawing;" & vbCrLf &
-                           "using System.IO;" & vbCrLf & vbCrLf
-
-                Case Language.Python
-                    importStr = "import struct" & vbCrLf &
-                        "import getopt" & vbCrLf &
-                        "import sys" & vbCrLf &
-                        "import os" & vbCrLf & vbCrLf
-
-                Case Language.Java
-
-
-                Case Language.Php
-                    'todo   
-
-            End Select
-
-            Return importStr
-        End Function
-        Public Function WriteHeader(ByVal thislang As Language, ByVal isNamespace As Boolean) As String
-            Dim header As String = Nothing
-
-            Select Case thislang
-                Case Language.VBNet
-                    If isNamespace Then
-                        header = "Namespace " & TextBox6.Text & vbCrLf
-                    End If
-                    header &= vbTab & "Public Class " & TextBox5.Text & vbCrLf
-                    If CheckBox1.Checked = True Then
-                        header &= vbTab & vbTab & "Inherits " & TextBox4.Text & vbCrLf & vbCrLf
-                    End If
-
-                Case Language.CSharp
-                    If isNamespace Then
-                        header = "Namespace " & TextBox6.Text & " {" & vbCrLf
-                    End If
-                    header &= vbTab & "public Class " & TextBox5.Text
-                    If CheckBox1.Checked = True Then
-                        header &= " : " & TextBox4.Text
-                    End If
-                    header &= " {" & vbCrLf & vbCrLf
-
-                Case Language.Python
-                    header = "class " & TextBox5.Text
-                    If CheckBox1.Checked = True Then
-                        header &= "(" & TextBox4.Text & ")" & vbCrLf
-                    Else
-                        header &= "(object):" & vbCrLf
-                    End If
-                Case Language.Java
-                    If isNamespace Then
-                        header = "package " & TextBox6.Text & ";" & vbCrLf
-                    End If
-                    header &= vbTab & "public Class " & TextBox5.Text
-                    If CheckBox1.Checked = True Then
-                        header &= " extends " & TextBox4.Text
-                    End If
-                    header &= " {" & vbCrLf & vbCrLf
-
-
-                Case Language.Php
-                    'todo
-
-            End Select
-
-            Return header
-        End Function 'header
-        Public Function WriteFields(ByVal thisLang As Language, ByVal thisFields() As String) As String
-            Dim fields As String = Nothing
-
-            For i As Integer = 0 To UBound(thisFields)
-                Dim thisType As String = "String"
-                Dim strField() As String = Split(thisFields(i), "#")
-                Dim varName As String = thisFields(i)
-
-                If Not strField Is Nothing Then
-                    thisType = strField(1)
-                    varName = strField(0)
-                End If
-
-                Select Case thisLang
-
-                    Case Language.VBNet
-                        fields &= vbTab & vbTab & "Private me" & varName & " as " & thisType & vbCrLf
-
-                    Case Language.CSharp
-                        thisType = thisType.ToLower
-                        fields &= vbTab & vbTab & "private " & thisType & " me" & varName & ";" & vbCrLf
-
-                    Case Language.Python
-                        'todo  
-                    Case Language.Java
-                        fields &= vbTab & vbTab & "private " & thisType & " me" & varName & ";" & vbCrLf
-
-                    Case Language.Php
-                        fields = Nothing
-
-                End Select
-            Next
-
-            Return fields & vbCrLf
-        End Function 'fields
-        Public Function WriteProperties(ByVal thisLang As Language, ByVal thisFields() As String) As String
-            Dim properties As String = Nothing
-
-            For i As Integer = 0 To UBound(thisFields)
-                Dim thisType As String = "String"
-                Dim strField() As String = Split(thisFields(i), "#")
-                Dim varName As String = thisFields(i)
-
-                If Not strField Is Nothing Then
-                    thisType = strField(1)
-                    varName = strField(0)
-                End If
-
-                Select Case thisLang
-
-                    Case Language.VBNet
-                        properties &= vbTab & vbTab & "Public Property " & varName & "() as " & thisType & vbCrLf &
-                                vbTab & vbTab & vbTab & "Get" & vbCrLf &
-                                vbTab & vbTab & vbTab & vbTab & "Return me" & varName & vbCrLf &
-                                vbTab & vbTab & vbTab & "End Get" & vbCrLf &
-                                vbTab & vbTab & vbTab & "Set(value as " & thisType & ")" & vbCrLf &
-                                vbTab & vbTab & vbTab & vbTab & "me" & varName & " = value" & vbCrLf &
-                                vbTab & vbTab & vbTab & "End Set" & vbCrLf &
-                                vbTab & vbTab & "End Property" & vbCrLf & vbCrLf
-
-                    Case Language.CSharp
-                        thisType = Replace(thisType, "Boolean", "bool")
-                        thisType = Replace(thisType, "Single", "float")
-                        thisType = Replace(thisType, "Object", "var")
-                        properties &= vbTab & vbTab & "public " & thisType & " " & varName & " {" & vbCrLf &
-                            vbTab & vbTab & vbTab & "get { return this.me" & varName & "; }" & vbCrLf &
-                            vbTab & vbTab & vbTab & "set { this.me" & varName & " = value; }" & vbCrLf &
-                            vbTab & vbTab & "}" & vbCrLf & vbCrLf
-
-                    Case Language.Python
-                        'todo  
-                    Case Language.Java
-                        thisType = Replace(thisType, "Boolean", "boolean")
-                        thisType = Replace(thisType, "Integer", "int")
-                        thisType = Replace(thisType, "single", "float")
-                        thisType = Replace(thisType, "Object", "Object")
-                        properties &= vbTab & vbTab & "public final " & thisType & " get" & varName & "() {" & vbCrLf &
-                            vbTab & vbTab & vbTab & " return me" & varName & ";" & vbCrLf & vbTab & vbTab & " }" & vbCrLf &
-                            vbTab & vbTab & "public final " & thisType & " set" & varName & "(" & thisType & " value) {" & vbCrLf &
-                            vbTab & vbTab & vbTab & " me" & varName & " = value;" & vbCrLf &
-                            vbTab & vbTab & " }" & vbCrLf & vbCrLf
-
-
-                    Case Language.Php
-                        properties = Nothing
-
-                End Select
-            Next
-
-            Return properties
-        End Function
-        Public Function WriteFooter(ByVal thisLang As Language, ByVal isNamespace As Boolean) As String
-            Dim footer As String = Nothing
-
-            Select Case thisLang
-                Case Language.VBNet
-                    If isNamespace Then
-                        footer &= vbTab & vbTab & "End Class" & vbCrLf
-                        footer &= "End Namespace" & vbCrLf
-                    Else
-                        footer &= vbTab & "End Class" & vbCrLf
-                    End If
-
-                Case Language.CSharp
-                    If isNamespace Then
-                        footer &= vbTab & "}" & vbCrLf
-                    End If
-                    footer &= "}" & vbCrLf
-
-                Case Language.Python
-                    'todo  
-
-                Case Language.Java
-                    footer &= "}" & vbCrLf
-
-                Case Language.Php
-                    footer = Nothing
-
-            End Select
-
-
-            Return footer
-        End Function
-        Public Function WriteCreators(ByVal thisLang As Language, ByVal isNamespace As Boolean, ByVal thisFields() As String) As String
-            Dim creators As String = Nothing
-            Dim header As String = Nothing
-            Dim content As String = Nothing
-            Dim footer As String = Nothing
-
-            For i As Integer = 0 To UBound(thisFields)
-
-                Select Case thisLang
-
-                    Case Language.VBNet
-                        If isNamespace Then
-                        End If
-                        header &= vbTab & vbTab & "Public Sub New("
-
-                    Case Language.CSharp
-                        If isNamespace Then
-                        End If
-                        header &= vbTab & vbTab & "public " & TextBox5.Text & "("
-
-                    Case Language.Python
-                        header = vbTab & "def __init__(self,"
-
-                    Case Language.Java
-                        header &= vbTab & vbTab & "public " & TextBox5.Text & "("
-
-                    Case Language.Php
-                        'todo   
-                End Select
-
-                Dim strType() As String = Split(thisFields(i), ";")
-                'todo
-                For j As Integer = 0 To UBound(strType)
-                    Dim strType2() As String = Split(strType(j), "#")
-                    Dim varName As String = strType2(0)
-                    Dim varType As String = strType2(1)
-
-                    If j > 0 And j <= UBound(strType) Then
-                        header &= ", "
-                    End If
-
-                    Select Case thisLang
-
-                        Case Language.VBNet
-                            If isNamespace Then
-                                'todo   
-                            End If
-                            header &= "Byval this" & varName & " as " & varType
-                            content &= vbTab & vbTab & vbTab & "me" & varName & " = this" & varName & vbCrLf
-                            If j >= UBound(strType) Then
-                                header &= ")" & vbCrLf
-                            End If
-
-                        Case Language.CSharp
-                            If isNamespace Then
-                                'todo   
-                            End If
-                            header &= varType & " this" & varName
-                            content &= vbTab & vbTab & vbTab & "this.me" & varName & " = this" & varName & ";" & vbCrLf
-                            If j >= UBound(strType) Then
-                                header &= ")"
-                                If CheckBoxCreators.Checked = True Then
-                                    header &= ":" & TextBox4.Text & " {" & vbCrLf
-                                Else
-                                    header &= " {" & vbCrLf
-                                End If
-                            End If
-
-                        Case Language.Python
-                            header &= "this" & varName
-                            content &= vbTab & vbTab & "self._me" & varName & " = this" & varName & vbCrLf
-                            If j >= UBound(strType) Then
-                                header &= "):" & vbCrLf
-                            End If
-
-                        Case Language.Java
-                            header &= varType & " this" & varName
-                            content &= vbTab & vbTab & vbTab & "me" & varName & " = this" & varName & ";" & vbCrLf
-                            If j >= UBound(strType) Then
-                                header &= ") {" & vbCrLf
-                            End If
-
-                        Case Language.Php
-                            'todo   
-
-                    End Select
-                Next
-
-                Select Case thisLang
-                    Case Language.VBNet
-                        If isNamespace Then
-                        End If
-                        footer = vbTab & vbTab & "End Sub" & vbCrLf & vbCrLf
-
-                    Case Language.CSharp
-                        If isNamespace Then
-                        End If
-                        footer = vbTab & vbTab & "}" & vbCrLf & vbCrLf
-
-                    Case Language.Python
-                        'todo   
-
-                    Case Language.Java
-                        footer = vbTab & vbTab & "}" & vbCrLf & vbCrLf
-
-                    Case Language.Php
-                        'todo   
-
-                End Select
-
-                creators &= header & content & footer
-            Next
-
-            Return creators
-        End Function
-        Private Sub WriteClass()
-            Dim str1() As String = Split(Replace(TextBox1.Text, vbTab, "#"), vbCrLf)
-            Dim str2() As String = Split(Replace(TextBox3.Text, vbTab, "#"), vbCrLf)
-            Dim lang As Language = ComboBox1.SelectedIndex
-            Dim str As String = WriteImports(lang) & WriteHeader(lang, CheckBox5.Checked)
-            If CheckBoxFields.Checked = True Then
-                str &= WriteFields(lang, str1)
-            End If
-            If CheckBoxCreators.Checked = True Then
-                str &= WriteCreators(lang, CheckBox5.Checked, str2)
-            End If
-            If CheckBoxFields.Checked = True Then
-                str &= WriteProperties(lang, str1)
-            End If
-            str &= WriteFooter(lang, CheckBox5.Checked)
-            TextBox2.Text = str
-        End Sub
-        Private Sub SetToClipboard(ByVal value As Object)
-            Clipboard.SetDataObject(value)
-        End Sub
+        Private meClassHelper As ClassHelper
+        Private meUtils As Utils
 
         Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
-            WriteClass()
+            meClassHelper = New ClassHelper(ComboBox1.SelectedIndex,
+                                            Split(Replace(FieldsTxt.Text, vbTab, "#"), vbCrLf),
+                                            NamespaceSrc.Text,
+                                            ClassNameTxt.Text,
+                                           InheritsTxt.Text,
+                                            Nothing,
+                                            CheckInherit.Checked,
+                                            CheckNamespc.Checked,
+                                            CheckBoxFields.Checked,
+                                            CheckBoxCreators.Checked,
+                                        Split(Replace(F4CreatorsTxt.Text, vbTab, "#"), vbCrLf))
+
+            TextBox2.Text = meClassHelper.WriteClass()
         End Sub
 
         Private Sub FormMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+            meUtils = New Utils()
             ComboBox1.SelectedIndex = 0
         End Sub
 
         Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+            txt2SelAll()
+        End Sub
+
+        Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+            meUtils.SetToClipboard(TextBox2.Text)
+        End Sub
+
+        Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+            If meClassHelper IsNot Nothing Then
+                meClassHelper.Lang = ComboBox1.SelectedIndex
+            End If
+        End Sub
+
+        Private Sub TxtSrc_TextChanged(sender As Object, e As EventArgs) Handles NamespaceSrc.TextChanged, InheritsTxt.TextChanged, ClassNameTxt.TextChanged
+            If meClassHelper IsNot Nothing Then
+                meUtils.UpdClassProcs(meClassHelper, sender.name, sender.value)
+            End If
+        End Sub
+
+        Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
+            For Each txt As TextBox In Me.Controls
+                txt.Clear()
+            Next
+        End Sub
+
+        Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+            End
+        End Sub
+
+        Private Sub ReplaceTabBy4SpacesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceTabBy4SpacesToolStripMenuItem.Click
+            TextBox2.Text = Replace(TextBox2.Text, vbTab, "    ")
+        End Sub
+
+        Private Sub Replace4SpacesByTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Replace4SpacesByTabToolStripMenuItem.Click
+            TextBox2.Text = Replace(TextBox2.Text, "    ", vbTab)
+        End Sub
+
+        Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
+            Txt2SelAll()
+        End Sub
+
+        Private Sub Txt2SelAll()
             TextBox2.Focus()
             TextBox2.SelectAll()
         End Sub
-        Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-            SetToClipboard(TextBox2.Text)
+
+        Private Sub SelectNoneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectNoneToolStripMenuItem.Click
+            TextBox2.SelectionStart = 0
+            TextBox2.SelectionLength = 0
+        End Sub
+
+        Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
+            TextBox2.Undo()
+        End Sub
+
+        Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
+            TextBox2.Redo()
+        End Sub
+
+        Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+            TextBox2.Copy()
+        End Sub
+
+        Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+            TextBox2.Paste()
+        End Sub
+
+        Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
+            TextBox2.Cut()
+        End Sub
+
+        Private Sub RemoveSpaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSpaceToolStripMenuItem.Click, RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Click
+            If sender.name.Equals("RemoveSpaceToolStripMenuItem") Then
+                meUtils.Trim(TextBox2, "Start")
+            Else
+                meUtils.Trim(TextBox2, "End")
+            End If
         End Sub
 
 #Region "Intellisense"
@@ -559,6 +298,8 @@ Namespace ClassMakerVBNet
         Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
             'todo simple shell execute
         End Sub
+
+
 #End Region
 
     End Class
