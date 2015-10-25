@@ -37,6 +37,14 @@
             str &= If(arg.Equals("Start"), textBox2.Lines(i).TrimStart & vbCrLf, textBox2.Lines(i).TrimEnd & vbCrLf)
         Next
         textBox2.Text = str
+    End Sub
 
+    ''' <summary>
+    ''' Select all text in the specified richtextbox.
+    ''' </summary>
+    ''' <param name="textBoxX">The richtextbox</param>
+    Public Sub Txt2SelAll(ByRef textBoxX As RichTextBox)
+        textBoxX.Focus()
+        textBoxX.SelectAll()
     End Sub
 End Class

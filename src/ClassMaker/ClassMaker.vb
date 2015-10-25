@@ -317,7 +317,7 @@
             Dim varName As String = meCurrentFields(i)
 
             If Not strField Is Nothing Then
-                thisType = strField(1)
+                thisType = TranslateTypeRef(strField(1))
                 varName = strField(0)
             End If
 
@@ -357,7 +357,7 @@
             Dim varName As String = meCurrentFields(i)
 
             If Not strField Is Nothing Then
-                thisType = strField(1)
+                thisType = TranslateTypeRef(strField(1))
                 varName = strField(0)
             End If
 
@@ -437,7 +437,6 @@
 
         End Select
 
-
         Return footer
     End Function
 
@@ -481,6 +480,7 @@
                 Dim strType2() As String = Split(strType(j), "#")
                 Dim varName As String = strType2(0)
                 Dim varType As String = strType2(1)
+                varType = TranslateTypeRef(varType)
 
                 If j > 0 And j <= UBound(strType) Then
                     header &= ", "
@@ -642,12 +642,21 @@
                         Return "string"
                     Case "uinteger"
                         Return "uint"
-
-
+                    Case Else
+                        Return thisType.ToLower
                 End Select
 
             Case Language.Java
-                'todo 
+                Select Case thisType.ToLower
+                    Case "single"
+                        Return "float"
+                    Case "str", "string"
+                        Return "string"
+                    Case "uinteger"
+                        Return "uint"
+                    Case Else
+                        Return thisType.ToLower
+                End Select
 
             Case Language.Php
                 'todo

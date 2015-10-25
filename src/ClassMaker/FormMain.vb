@@ -6,12 +6,17 @@ Namespace ClassMakerVBNet
         Private meClassHelper As ClassHelper
         Private meUtils As Utils
 
+        Private Sub FormMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+            meUtils = New Utils()
+            ComboBox1.SelectedIndex = 0
+        End Sub
+
         Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
             meClassHelper = New ClassHelper(ComboBox1.SelectedIndex,
                                             Split(Replace(FieldsTxt.Text, vbTab, "#"), vbCrLf),
                                             NamespaceSrc.Text,
                                             ClassNameTxt.Text,
-                                           InheritsTxt.Text,
+                                            InheritsTxt.Text,
                                             Nothing,
                                             CheckInherit.Checked,
                                             CheckNamespc.Checked,
@@ -22,13 +27,8 @@ Namespace ClassMakerVBNet
             TextBox2.Text = meClassHelper.WriteClass()
         End Sub
 
-        Private Sub FormMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-            meUtils = New Utils()
-            ComboBox1.SelectedIndex = 0
-        End Sub
-
         Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-            txt2SelAll()
+            meUtils.Txt2SelAll(TextBox2)
         End Sub
 
         Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
@@ -53,10 +53,6 @@ Namespace ClassMakerVBNet
             Next
         End Sub
 
-        Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-            End
-        End Sub
-
         Private Sub ReplaceTabBy4SpacesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceTabBy4SpacesToolStripMenuItem.Click
             TextBox2.Text = Replace(TextBox2.Text, vbTab, "    ")
         End Sub
@@ -66,12 +62,7 @@ Namespace ClassMakerVBNet
         End Sub
 
         Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
-            Txt2SelAll()
-        End Sub
-
-        Private Sub Txt2SelAll()
-            TextBox2.Focus()
-            TextBox2.SelectAll()
+            meUtils.Txt2SelAll(TextBox2)
         End Sub
 
         Private Sub SelectNoneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectNoneToolStripMenuItem.Click
@@ -107,6 +98,9 @@ Namespace ClassMakerVBNet
             End If
         End Sub
 
+        Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+            End
+        End Sub
 #Region "Intellisense"
 #Region "Intellisense Fields"
         Private findNodeResult As TreeNode = Nothing
