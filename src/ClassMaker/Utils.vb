@@ -47,4 +47,45 @@
         textBoxX.Focus()
         textBoxX.SelectAll()
     End Sub
+
+    ''' <summary>
+    ''' Open the generated class in Visual Studio.
+    ''' </summary>
+    ''' <param name="thisLang">The lang.</param>
+    ''' <param name="thisClassTxt">The class src.</param>
+    ''' <param name="thisClassName">Name of the specified class to open in VS.</param>
+    Public Sub OpenInVS(ByVal thisLang As String, ByRef thisClassTxt As RichTextBox, ByVal thisClassName As String)
+
+        Dim path As String = Application.StartupPath & "\temp\" & thisLang & "\" & thisClassName & "."
+        Dim ext As String = ".txt"
+
+        Select Case thisLang
+            Case "vbnet",
+                 "csharp",
+                 "python"
+                ext = Mid(thisLang, 1, 2)
+
+            Case "java",
+                 "php"
+                ext = thisLang
+
+            Case ClassHelper.Language.Cpp
+                ext = "h"
+
+            Case ClassHelper.Language.Arduino_Java
+                'todo
+
+            Case ClassHelper.Language.Arduino_C
+                'ino, h
+
+        End Select
+        path &= ext
+
+        Try
+            thisClassTxt.SaveFile(path)
+            Process.Start("devenv", path)
+        Catch ex As Exception
+            Console.WriteLine("OpenInVS error: " & ex.Message & " " & ex.StackTrace)
+        End Try
+    End Sub
 End Class

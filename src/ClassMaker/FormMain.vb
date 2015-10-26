@@ -6,12 +6,12 @@ Namespace ClassMakerVBNet
         Private meClassHelper As ClassHelper
         Private meUtils As Utils
 
-        Private Sub FormMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             meUtils = New Utils()
             ComboBox1.SelectedIndex = 0
         End Sub
 
-        Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
             meClassHelper = New ClassHelper(ComboBox1.SelectedIndex,
                                             Split(Replace(FieldsTxt.Text, vbTab, "#"), vbCrLf),
                                             NamespaceSrc.Text,
@@ -24,15 +24,20 @@ Namespace ClassMakerVBNet
                                             CheckBoxCreators.Checked,
                                         Split(Replace(F4CreatorsTxt.Text, vbTab, "#"), vbCrLf))
 
-            TextBox2.Text = meClassHelper.WriteClass()
+            ClassTxt.Text = meClassHelper.WriteClass()
         End Sub
 
         Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-            meUtils.Txt2SelAll(TextBox2)
+            meUtils.Txt2SelAll(ClassTxt)
         End Sub
 
         Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-            meUtils.SetToClipboard(TextBox2.Text)
+            meUtils.SetToClipboard(ClassTxt.Text)
+        End Sub
+
+        Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+            Dim lang As String = [Enum].GetName(GetType(ClassHelper.Language), meClassHelper.Lang).ToLower
+            meUtils.OpenInVS(lang, ClassTxt, meClassHelper.ClassNameSrc)
         End Sub
 
         Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -54,47 +59,47 @@ Namespace ClassMakerVBNet
         End Sub
 
         Private Sub ReplaceTabBy4SpacesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceTabBy4SpacesToolStripMenuItem.Click
-            TextBox2.Text = Replace(TextBox2.Text, vbTab, "    ")
+            ClassTxt.Text = Replace(ClassTxt.Text, vbTab, "    ")
         End Sub
 
         Private Sub Replace4SpacesByTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Replace4SpacesByTabToolStripMenuItem.Click
-            TextBox2.Text = Replace(TextBox2.Text, "    ", vbTab)
+            ClassTxt.Text = Replace(ClassTxt.Text, "    ", vbTab)
         End Sub
 
         Private Sub SelectAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectAllToolStripMenuItem.Click
-            meUtils.Txt2SelAll(TextBox2)
+            meUtils.Txt2SelAll(ClassTxt)
         End Sub
 
         Private Sub SelectNoneToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SelectNoneToolStripMenuItem.Click
-            TextBox2.SelectionStart = 0
-            TextBox2.SelectionLength = 0
+            ClassTxt.SelectionStart = 0
+            ClassTxt.SelectionLength = 0
         End Sub
 
         Private Sub UndoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UndoToolStripMenuItem.Click
-            TextBox2.Undo()
+            ClassTxt.Undo()
         End Sub
 
         Private Sub RedoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RedoToolStripMenuItem.Click
-            TextBox2.Redo()
+            ClassTxt.Redo()
         End Sub
 
         Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
-            TextBox2.Copy()
+            ClassTxt.Copy()
         End Sub
 
         Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
-            TextBox2.Paste()
+            ClassTxt.Paste()
         End Sub
 
         Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
-            TextBox2.Cut()
+            ClassTxt.Cut()
         End Sub
 
         Private Sub RemoveSpaceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoveSpaceToolStripMenuItem.Click, RemoveSpaceAtTheEndOfLinesToolStripMenuItem.Click
             If sender.name.Equals("RemoveSpaceToolStripMenuItem") Then
-                meUtils.Trim(TextBox2, "Start")
+                meUtils.Trim(ClassTxt, "Start")
             Else
-                meUtils.Trim(TextBox2, "End")
+                meUtils.Trim(ClassTxt, "End")
             End If
         End Sub
 
@@ -289,9 +294,7 @@ Namespace ClassMakerVBNet
             Next
         End Sub
 
-        Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-            'todo simple shell execute
-        End Sub
+
 
 
 #End Region

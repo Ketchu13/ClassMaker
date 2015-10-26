@@ -59,7 +59,7 @@
             Me.CheckBox15 = New System.Windows.Forms.CheckBox()
             Me.GroupBox1 = New System.Windows.Forms.GroupBox()
             Me.Panel1 = New System.Windows.Forms.Panel()
-            Me.TextBox2 = New System.Windows.Forms.RichTextBox()
+            Me.ClassTxt = New System.Windows.Forms.RichTextBox()
             Me.TreeView1 = New System.Windows.Forms.TreeView()
             Me.GroupBox2 = New System.Windows.Forms.GroupBox()
             Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -507,7 +507,7 @@
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
             Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
-            Me.Panel1.Controls.Add(Me.TextBox2)
+            Me.Panel1.Controls.Add(Me.ClassTxt)
             Me.Panel1.Controls.Add(Me.TreeView1)
             Me.Panel1.Controls.Add(Me.GroupBox2)
             Me.Panel1.Controls.Add(Me.GroupBox1)
@@ -541,20 +541,20 @@
             '
             'TextBox2
             '
-            Me.TextBox2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Me.ClassTxt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-            Me.TextBox2.AutoWordSelection = True
-            Me.TextBox2.BackColor = System.Drawing.Color.AntiqueWhite
-            Me.TextBox2.EnableAutoDragDrop = True
-            Me.TextBox2.ForeColor = System.Drawing.Color.Black
-            Me.TextBox2.HideSelection = False
-            Me.TextBox2.Location = New System.Drawing.Point(309, 19)
-            Me.TextBox2.Name = "TextBox2"
-            Me.TextBox2.ShowSelectionMargin = True
-            Me.TextBox2.Size = New System.Drawing.Size(512, 642)
-            Me.TextBox2.TabIndex = 33
-            Me.TextBox2.Text = ""
+            Me.ClassTxt.AutoWordSelection = True
+            Me.ClassTxt.BackColor = System.Drawing.Color.AntiqueWhite
+            Me.ClassTxt.EnableAutoDragDrop = True
+            Me.ClassTxt.ForeColor = System.Drawing.Color.Black
+            Me.ClassTxt.HideSelection = False
+            Me.ClassTxt.Location = New System.Drawing.Point(309, 19)
+            Me.ClassTxt.Name = "TextBox2"
+            Me.ClassTxt.ShowSelectionMargin = True
+            Me.ClassTxt.Size = New System.Drawing.Size(512, 642)
+            Me.ClassTxt.TabIndex = 33
+            Me.ClassTxt.Text = ""
             '
             'TreeView1
             '
@@ -891,7 +891,7 @@
         Friend WithEvents HowToToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents TreeView1 As TreeView
-        Friend WithEvents TextBox2 As RichTextBox
+        Friend WithEvents ClassTxt As RichTextBox
         Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
         Friend WithEvents NewToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
