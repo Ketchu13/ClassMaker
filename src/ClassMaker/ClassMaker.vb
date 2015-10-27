@@ -567,7 +567,12 @@
     ''' <returns></returns>
     Public Function WriteClass()
 
-        Dim str As String = WriteImports() & WriteHeader()
+        Dim str As String = nothing
+        if meIsNamespaceRqd = true  then 'todo rewrite good
+
+         str & =   WriteImports() & WriteHeader()
+        end if
+
         If CheckBoxFields = True Then
             str &= WriteFields()
         End If

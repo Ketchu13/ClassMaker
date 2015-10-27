@@ -16,7 +16,7 @@ Namespace ClassMakerVBNet
 
         Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
             meClassHelper = New ClassHelper(ComboBox1.SelectedIndex,
-                                            Split(Replace(FieldsTxt.Text, vbTab, "#"), vbCrLf),
+                                            Split(replace(Replace(FieldsTxt.Text, vbTab, "#"),vbcrlf & vbcrlf, vbcrlf), vbCrLf),
                                             NamespaceSrc.Text,
                                             ClassNameTxt.Text,
                                             InheritsTxt.Text,
@@ -308,7 +308,22 @@ Namespace ClassMakerVBNet
         Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
              meutils.SaveThisClassAs(ClassTxt, ClassNameTxt.text)
         End Sub
-        
+
+        Private Sub CheckNamespc_CheckedChanged(sender As Object, e As EventArgs) Handles CheckNamespc.CheckedChanged,
+            CheckBoxFields.CheckedChanged, 
+            CheckInherit.CheckedChanged,
+            CheckBox4.CheckedChanged, 
+            CheckBoxCreators.CheckedChanged
+            if meclasshelper IsNot nothing then
+              try
+                    callbyname(meclasshelper,sender.name,calltype.set, sender.checked)
+              Catch ex As Exception
+                    console.writeline(ex.message)
+              End Try
+                   
+            End If
+        End Sub
+
 #End Region
 
     End Class
