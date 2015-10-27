@@ -1,5 +1,5 @@
 ﻿Public Class Utils
-
+    private meCurrentFile as string
     ''' <summary>
     ''' Sets the clipboard data.
     ''' </summary>
@@ -54,10 +54,92 @@
     ''' <param name="thisLang">The lang.</param>
     ''' <param name="thisClassTxt">The class src.</param>
     ''' <param name="thisClassName">Name of the specified class to open in VS.</param>
-    Public Sub OpenInVS(ByVal thisLang As String, ByRef thisClassTxt As RichTextBox, ByVal thisClassName As String)
+    Public sub OpenInVS(ByVal thisLang As classhelper.language, ByRef thisClassTxt As RichTextBox, ByVal thisClassName As String) 
+       if SaveThisClassAs(thisClassTxt,thisClassName, thislang.value__) then
+  Try
+            Process.Start("devenv", meCurrentFile)
+        Catch ex As Exception
+            Console.WriteLine("OpenInVS error: " & ex.Message & " " & ex.StackTrace)
+        End Try
+       End If
+  
+    End sub
+    
+    ''' <summary>
+    ''' Saves the specified textbox.
+    ''' </summary>
+    ''' <param name="thisClassTxtBx">The class TXTbx.</param>
+    public function  SaveThisClassAs(byref thisClassTxtBx as Richtextbox, byval thisClassName as string, byval optional index as integer = 5) as boolean
+         dim savefileD as new savefiledialog()
+            with savefileD
+                .Filter = "Visual Basic files (*.vb)|*.vb|" & 
+                          "CSharp files (*.cs)|*.cs|" & 
+                          "Python files (*.py)|*.py|" & 
+                          "Java files (*.java)|*.java|" &
+                          "Txt files (*.txt)|*.txt|" & 
+                          "All files (*.*)|*.*"
+                .FilterIndex = index
+            .filename = thisClassName
+                .RestoreDirectory = True
+            end with
+        If savefileD.ShowDialog() = DialogResult.OK Then
+            meCurrentFile = savefileD.filename
+            SaveThisClass(thisClassTxtBx )
+            return true
+            else
+            return false
+        End If        
+   End function
 
-        Dim path As String = Application.StartupPath & "\temp\" & thisLang & "\" & thisClassName & "."
-        Dim ext As String = ".txt"
+    ''' <summary>
+    ''' Saves the specified textbox.
+    ''' </summary>
+    ''' <param name="thisClassTxtBx">The class TXTbx.</param>
+    ''' <param name="path">The path.</param>
+    public sub  SaveThisClass(byref thisClassTxtBx as Richtextbox, byval optional thisClassName as string = nothing)
+       if mecurrentfile is nothing then
+          SaveThisClassAs(thisClassTxtBx,  thisClassName )
+       else
+            thisClassTxtBx.SaveFile(meCurrentFile,richtextboxstreamtype.PlainText)
+       End If
+   End sub
+
+    ''' <summary>
+    ''' Clear the TXTbox.
+    ''' </summary>
+    ''' <param name="parent">The parent.</param>
+    Public sub  ClearTxtBox( ByVal parent As Control) 
+      try
+        If parent IsNot Nothing Then
+            For Each child As Control In parent.Controls
+                If child.GetType Is gettype(textbox) Then
+                   dim txtB as textbox = child
+                    txtb.clear
+                End If
+            Next
+        End If
+        
+      Catch ex As Exception
+            msgbox(ex.message)
+      End Try      
+    End sub
+
+    ''' <summary>
+    ''' News the class.
+    ''' </summary>
+    ''' <param name="thisForm">The this form.</param>
+    public sub NewClass(byref thisForm as form)
+        meCurrentFile = Nothing
+        ClearTxtBox(thisform.controls(0))
+    End sub
+
+    ''' <summary>
+    ''' Gets the ext.
+    ''' </summary>
+    ''' <param name="thisLang">The this lang.</param>
+    ''' <returns></returns>
+    public function  GetExt(byval thisLang as string) as string
+            Dim ext As String = ".txt"
 
         Select Case thisLang
             Case "vbnet",
@@ -79,13 +161,7 @@
                 'ino, h
 
         End Select
-        path &= ext
+        return  ext
 
-        Try
-            thisClassTxt.SaveFile(path)
-            Process.Start("devenv", path)
-        Catch ex As Exception
-            Console.WriteLine("OpenInVS error: " & ex.Message & " " & ex.StackTrace)
-        End Try
-    End Sub
+    End function
 End Class

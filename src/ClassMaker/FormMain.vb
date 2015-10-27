@@ -2,13 +2,16 @@
 
 Namespace ClassMakerVBNet
     Public Class FormMain
-
+#region "Fields"
         Private meClassHelper As ClassHelper
         Private meUtils As Utils
-
+        
+#End Region
+        
         Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             meUtils = New Utils()
             ComboBox1.SelectedIndex = 0
+            
         End Sub
 
         Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -36,8 +39,7 @@ Namespace ClassMakerVBNet
         End Sub
 
         Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-            Dim lang As String = [Enum].GetName(GetType(ClassHelper.Language), meClassHelper.Lang).ToLower
-            meUtils.OpenInVS(lang, ClassTxt, meClassHelper.ClassNameSrc)
+               meUtils.OpenInVS(meClassHelper.Lang, ClassTxt, meClassHelper.ClassNameSrc)
         End Sub
 
         Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -53,9 +55,8 @@ Namespace ClassMakerVBNet
         End Sub
 
         Private Sub NewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewToolStripMenuItem.Click
-            For Each txt As TextBox In Me.Controls
-                txt.Clear()
-            Next
+           meutils.NewClass(me)
+           
         End Sub
 
         Private Sub ReplaceTabBy4SpacesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReplaceTabBy4SpacesToolStripMenuItem.Click
@@ -102,6 +103,9 @@ Namespace ClassMakerVBNet
                 meUtils.Trim(ClassTxt, "End")
             End If
         End Sub
+        Private Sub GeneralNamingConventionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GeneralNamingConventionMSDNToolStripMenuItem.Click
+            Process.Start("https://msdn.microsoft.com/en-us/library/ms229002(v=vs.110).aspx")
+        End Sub
 
         Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
             End
@@ -119,8 +123,7 @@ Namespace ClassMakerVBNet
         Private currentPath As String
 #End Region
         'Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        '    SetToClipboard(TextBox2.Text)
-        '    'ReadAssembly("C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll")
+                '    'ReadAssembly("C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.dll")
         'End Sub
 
         'Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -294,9 +297,18 @@ Namespace ClassMakerVBNet
             Next
         End Sub
 
+        Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+            meutils.SaveThisClass(ClassTxt)
+        End Sub
 
+        Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+            meutils.SaveThisClass(ClassTxt)
+        End Sub
 
-
+        Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
+             meutils.SaveThisClassAs(ClassTxt, ClassNameTxt.text)
+        End Sub
+        
 #End Region
 
     End Class
