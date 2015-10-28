@@ -174,9 +174,9 @@
     End Property
 
     ''' <summary>
-    ''' Gets or sets a value indicating whether [check box creators].
+    ''' Gets or sets a value indicating whether [checkbox creators].
     ''' </summary>
-    ''' <value><c>true</c> if [check box creators]; otherwise, <c>false</c>.</value>
+    ''' <value><c>true</c> if [checkbox creators]; otherwise, <c>false</c>.</value>
     Public Property CheckBoxCreators As Boolean
         Get
             Return meCheckBoxCreators
@@ -191,7 +191,7 @@
     ''' Gets or sets a value indicating whether this instance is namespace RQD.
     ''' </summary>
     ''' <value>
-    ''' <c>true</c> if this instance is namespace RQD; otherwise, <c>false</c>.
+    ''' <c>true</c> if this instance is namespace query; otherwise, <c>false</c>.
     ''' </value>
     Public Property IsNamespaceRqd As Boolean
         Get
@@ -569,16 +569,17 @@
 
         Dim str As String = nothing
         if meIsNamespaceRqd = true  then 'todo rewrite good
-
-         str & =   WriteImports() & WriteHeader()
+            str & =   WriteImports() & WriteHeader()
         end if
 
         If CheckBoxFields = True Then
             str &= WriteFields()
         End If
+
         If CheckBoxCreators = True Then
             str &= WriteCreators()
         End If
+
         If CheckBoxFields = True Then
             str &= WriteProperties()
         End If
@@ -663,13 +664,9 @@
                         Return thisType.ToLower
                 End Select
 
-            Case Language.Php
-                'todo
-
-        End Select
+         End Select
         Return Nothing
     End Function 'convert type
 
 #End Region
-
 End Class
