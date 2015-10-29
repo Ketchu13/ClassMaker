@@ -151,13 +151,12 @@
                  "php"
                 ext = thisLang
 
-            Case ClassHelper.Language.Cpp
+            Case "Cpp"
                 ext = "h"
-
-            Case ClassHelper.Language.Arduino_Java
                 'todo
 
-            Case ClassHelper.Language.Arduino_C
+            Case "arduino_c"
+                ext = "h"
                 'ino, h
 
         End Select
