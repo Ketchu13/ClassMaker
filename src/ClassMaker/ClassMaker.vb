@@ -324,7 +324,7 @@
             Select Case Lang
 
                 Case Language.VBNet
-                    fields &= vbTab & vbTab & "Private me" & varName & " as " & thisType & vbCrLf
+                    fields &= vbTab & vbTab & "Private me" & varName & " As " & thisType & vbCrLf
 
                 Case Language.CSharp
                     thisType = thisType.ToLower

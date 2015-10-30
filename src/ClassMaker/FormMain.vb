@@ -11,12 +11,13 @@ Namespace ClassMakerVBNet
         Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             meUtils = New Utils()
             ComboBox1.SelectedIndex = 0
-            
+            meUtils.LoadVbKeywords()
+              meutils.hilight(fieldstxt,"'")
         End Sub
 
         Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
             meClassHelper = New ClassHelper(ComboBox1.SelectedIndex,
-                                            Split(replace(Replace(FieldsTxt.Text, vbTab, "#"),vbcrlf & vbcrlf, vbcrlf), vbCrLf),
+                                            Split(replace(Replace(FieldsTxt.Text, vbTab, "#"),vblf & vblf, vblf), vbLf),
                                             NamespaceSrc.Text,
                                             ClassNameTxt.Text,
                                             InheritsTxt.Text,
@@ -28,6 +29,8 @@ Namespace ClassMakerVBNet
                                         Split(Replace(F4CreatorsTxt.Text, vbTab, "#"), vbCrLf))
 
             ClassTxt.Text = meClassHelper.WriteClass()
+     meUtils.Hilight(ClassTxt ,"'")
+
         End Sub
 
         Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -45,6 +48,9 @@ Namespace ClassMakerVBNet
         Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
             If meClassHelper IsNot Nothing Then
                 meClassHelper.Lang = ComboBox1.SelectedIndex
+                if ComboBox1.SelectedIndex = classhelper.language.vbnet then
+                    meUtils.LoadVbKeywords()
+                End If
             End If
         End Sub
 
@@ -322,6 +328,15 @@ Namespace ClassMakerVBNet
               End Try
                    
             End If
+        End Sub
+
+        Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+        End Sub
+
+        Private Sub FieldsTxt_TextChanged(sender As Object, e As EventArgs) Handles FieldsTxt.TextChanged
+            meutils.hilight(fieldstxt,"'")
+
         End Sub
 
 #End Region

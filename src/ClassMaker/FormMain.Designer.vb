@@ -24,7 +24,6 @@
         <DebuggerStepThrough()>
         Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
-        Me.FieldsTxt = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.F4CreatorsTxt = New System.Windows.Forms.TextBox()
         Me.InheritsTxt = New System.Windows.Forms.TextBox()
@@ -47,21 +46,9 @@
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.ClassTxt = New System.Windows.Forms.RichTextBox()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -98,30 +85,38 @@
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox1.SuspendLayout
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CheckBox15 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox13 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox14 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox10 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox9 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox7 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox6 = New System.Windows.Forms.CheckBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.FieldsTxt = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout
-        Me.GroupBox2.SuspendLayout
         Me.MenuStrip1.SuspendLayout
+        Me.Panel2.SuspendLayout
+        Me.Panel3.SuspendLayout
+        Me.Panel4.SuspendLayout
+        Me.Panel5.SuspendLayout
         Me.SuspendLayout
-        '
-        'FieldsTxt
-        '
-        Me.FieldsTxt.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
-            Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.FieldsTxt.BackColor = System.Drawing.Color.Bisque
-        Me.FieldsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FieldsTxt.Location = New System.Drawing.Point(6, 182)
-        Me.FieldsTxt.Multiline = true
-        Me.FieldsTxt.Name = "FieldsTxt"
-        Me.FieldsTxt.Size = New System.Drawing.Size(297, 166)
-        Me.FieldsTxt.TabIndex = 0
-        Me.FieldsTxt.Text = "Action#single"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdi#single"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdu#Integer"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Complaining#Doubl"& _ 
-    "e"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Priority#Boolean"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Size#single"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Targeti#single"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Targetu#single"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Timer#single"
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(308, 667)
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(308, 682)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 27)
         Me.Button1.TabIndex = 2
@@ -131,9 +126,10 @@
         'F4CreatorsTxt
         '
         Me.F4CreatorsTxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.F4CreatorsTxt.BackColor = System.Drawing.Color.Bisque
+        Me.F4CreatorsTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.F4CreatorsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 385)
+        Me.F4CreatorsTxt.ForeColor = System.Drawing.Color.White
+        Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 380)
         Me.F4CreatorsTxt.Multiline = true
         Me.F4CreatorsTxt.Name = "F4CreatorsTxt"
         Me.F4CreatorsTxt.Size = New System.Drawing.Size(297, 105)
@@ -142,8 +138,9 @@
         '
         'InheritsTxt
         '
-        Me.InheritsTxt.BackColor = System.Drawing.Color.Bisque
+        Me.InheritsTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.InheritsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.InheritsTxt.ForeColor = System.Drawing.Color.White
         Me.InheritsTxt.Location = New System.Drawing.Point(6, 129)
         Me.InheritsTxt.Name = "InheritsTxt"
         Me.InheritsTxt.Size = New System.Drawing.Size(297, 20)
@@ -163,7 +160,7 @@
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = true
-        Me.Label2.Location = New System.Drawing.Point(3, 369)
+        Me.Label2.Location = New System.Drawing.Point(3, 364)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(85, 13)
         Me.Label2.TabIndex = 6
@@ -189,8 +186,9 @@
         '
         'ClassNameTxt
         '
-        Me.ClassNameTxt.BackColor = System.Drawing.Color.Bisque
+        Me.ClassNameTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.ClassNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ClassNameTxt.ForeColor = System.Drawing.Color.White
         Me.ClassNameTxt.Location = New System.Drawing.Point(6, 76)
         Me.ClassNameTxt.Name = "ClassNameTxt"
         Me.ClassNameTxt.Size = New System.Drawing.Size(297, 20)
@@ -235,7 +233,7 @@
         Me.CheckBoxCreators.Checked = true
         Me.CheckBoxCreators.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBoxCreators.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBoxCreators.Location = New System.Drawing.Point(211, 496)
+        Me.CheckBoxCreators.Location = New System.Drawing.Point(211, 491)
         Me.CheckBoxCreators.Name = "CheckBoxCreators"
         Me.CheckBoxCreators.Size = New System.Drawing.Size(92, 17)
         Me.CheckBoxCreators.TabIndex = 13
@@ -250,7 +248,7 @@
         Me.CheckBoxFields.Checked = true
         Me.CheckBoxFields.CheckState = System.Windows.Forms.CheckState.Checked
         Me.CheckBoxFields.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBoxFields.Location = New System.Drawing.Point(206, 354)
+        Me.CheckBoxFields.Location = New System.Drawing.Point(206, 349)
         Me.CheckBoxFields.Name = "CheckBoxFields"
         Me.CheckBoxFields.Size = New System.Drawing.Size(97, 17)
         Me.CheckBoxFields.TabIndex = 14
@@ -283,8 +281,9 @@
         '
         'NamespaceSrc
         '
-        Me.NamespaceSrc.BackColor = System.Drawing.Color.Bisque
+        Me.NamespaceSrc.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.NamespaceSrc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.NamespaceSrc.ForeColor = System.Drawing.Color.White
         Me.NamespaceSrc.Location = New System.Drawing.Point(6, 19)
         Me.NamespaceSrc.Name = "NamespaceSrc"
         Me.NamespaceSrc.Size = New System.Drawing.Size(297, 20)
@@ -318,8 +317,11 @@
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button2.Location = New System.Drawing.Point(726, 667)
+        Me.Button2.Location = New System.Drawing.Point(726, 682)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(95, 27)
         Me.Button2.TabIndex = 2
@@ -329,8 +331,11 @@
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.Button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button3.Location = New System.Drawing.Point(409, 667)
+        Me.Button3.Location = New System.Drawing.Point(409, 682)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(95, 27)
         Me.Button3.TabIndex = 2
@@ -341,8 +346,11 @@
         '
         Me.Button4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
             Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button4.Location = New System.Drawing.Point(510, 667)
+        Me.Button4.Location = New System.Drawing.Point(510, 682)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(102, 27)
         Me.Button4.TabIndex = 20
@@ -352,168 +360,32 @@
         'Button5
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button5.Location = New System.Drawing.Point(618, 667)
+        Me.Button5.Location = New System.Drawing.Point(618, 682)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(102, 27)
         Me.Button5.TabIndex = 21
         Me.Button5.Text = "Open Class in V.S"
         Me.Button5.UseVisualStyleBackColor = true
         '
-        'CheckBox6
-        '
-        Me.CheckBox6.AutoSize = true
-        Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox6.Location = New System.Drawing.Point(59, 19)
-        Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(70, 17)
-        Me.CheckBox6.TabIndex = 22
-        Me.CheckBox6.Text = "Singleton"
-        Me.CheckBox6.UseVisualStyleBackColor = true
-        '
-        'CheckBox7
-        '
-        Me.CheckBox7.AutoSize = true
-        Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox7.Location = New System.Drawing.Point(29, 42)
-        Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(100, 17)
-        Me.CheckBox7.TabIndex = 23
-        Me.CheckBox7.Text = "Factory Method"
-        Me.CheckBox7.UseVisualStyleBackColor = true
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = true
-        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox8.Location = New System.Drawing.Point(26, 65)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(103, 17)
-        Me.CheckBox8.TabIndex = 24
-        Me.CheckBox8.Text = "Abstract Factory"
-        Me.CheckBox8.UseVisualStyleBackColor = true
-        '
-        'CheckBox9
-        '
-        Me.CheckBox9.AutoSize = true
-        Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox9.Location = New System.Drawing.Point(94, 88)
-        Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(35, 17)
-        Me.CheckBox9.TabIndex = 25
-        Me.CheckBox9.Text = "..."
-        Me.CheckBox9.UseVisualStyleBackColor = true
-        '
-        'CheckBox10
-        '
-        Me.CheckBox10.AutoSize = true
-        Me.CheckBox10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox10.Location = New System.Drawing.Point(193, 65)
-        Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(35, 17)
-        Me.CheckBox10.TabIndex = 26
-        Me.CheckBox10.Text = "..."
-        Me.CheckBox10.UseVisualStyleBackColor = true
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = true
-        Me.CheckBox11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox11.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox11.Location = New System.Drawing.Point(159, 42)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(69, 17)
-        Me.CheckBox11.TabIndex = 27
-        Me.CheckBox11.Text = "Observer"
-        Me.CheckBox11.UseVisualStyleBackColor = true
-        '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = true
-        Me.CheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox12.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox12.Location = New System.Drawing.Point(176, 19)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(52, 17)
-        Me.CheckBox12.TabIndex = 28
-        Me.CheckBox12.Text = "Proxy"
-        Me.CheckBox12.UseVisualStyleBackColor = true
-        '
-        'CheckBox13
-        '
-        Me.CheckBox13.AutoSize = true
-        Me.CheckBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox13.Location = New System.Drawing.Point(193, 88)
-        Me.CheckBox13.Name = "CheckBox13"
-        Me.CheckBox13.Size = New System.Drawing.Size(35, 17)
-        Me.CheckBox13.TabIndex = 29
-        Me.CheckBox13.Text = "..."
-        Me.CheckBox13.UseVisualStyleBackColor = true
-        '
-        'CheckBox14
-        '
-        Me.CheckBox14.AutoSize = true
-        Me.CheckBox14.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox14.Location = New System.Drawing.Point(94, 111)
-        Me.CheckBox14.Name = "CheckBox14"
-        Me.CheckBox14.Size = New System.Drawing.Size(35, 17)
-        Me.CheckBox14.TabIndex = 25
-        Me.CheckBox14.Text = "..."
-        Me.CheckBox14.UseVisualStyleBackColor = true
-        '
-        'CheckBox15
-        '
-        Me.CheckBox15.AutoSize = true
-        Me.CheckBox15.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.CheckBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.CheckBox15.Location = New System.Drawing.Point(193, 111)
-        Me.CheckBox15.Name = "CheckBox15"
-        Me.CheckBox15.Size = New System.Drawing.Size(35, 17)
-        Me.CheckBox15.TabIndex = 29
-        Me.CheckBox15.Text = "..."
-        Me.CheckBox15.UseVisualStyleBackColor = true
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.CheckBox15)
-        Me.GroupBox1.Controls.Add(Me.CheckBox13)
-        Me.GroupBox1.Controls.Add(Me.CheckBox12)
-        Me.GroupBox1.Controls.Add(Me.CheckBox11)
-        Me.GroupBox1.Controls.Add(Me.CheckBox14)
-        Me.GroupBox1.Controls.Add(Me.CheckBox10)
-        Me.GroupBox1.Controls.Add(Me.CheckBox9)
-        Me.GroupBox1.Controls.Add(Me.CheckBox8)
-        Me.GroupBox1.Controls.Add(Me.CheckBox7)
-        Me.GroupBox1.Controls.Add(Me.CheckBox6)
-        Me.GroupBox1.Enabled = false
-        Me.GroupBox1.Location = New System.Drawing.Point(6, 517)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(296, 132)
-        Me.GroupBox1.TabIndex = 30
-        Me.GroupBox1.TabStop = false
-        Me.GroupBox1.Text = "Design Patterns"
-        '
         'Panel1
         '
         Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
             Or System.Windows.Forms.AnchorStyles.Left)  _
             Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51,Byte),Integer), CType(CType(51,Byte),Integer), CType(CType(55,Byte),Integer))
+        Me.Panel1.Controls.Add(Me.FieldsTxt)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.ClassTxt)
         Me.Panel1.Controls.Add(Me.TreeView1)
-        Me.Panel1.Controls.Add(Me.GroupBox2)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.CheckNamespc)
+        Me.Panel1.Controls.Add(Me.Label9)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.NamespaceSrc)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -533,10 +405,11 @@
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.FieldsTxt)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.ForeColor = System.Drawing.Color.White
         Me.Panel1.Location = New System.Drawing.Point(0, 25)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(827, 703)
+        Me.Panel1.Size = New System.Drawing.Size(827, 719)
         Me.Panel1.TabIndex = 31
         '
         'ClassTxt
@@ -545,14 +418,14 @@
             Or System.Windows.Forms.AnchorStyles.Left)  _
             Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.ClassTxt.AutoWordSelection = true
-        Me.ClassTxt.BackColor = System.Drawing.Color.AntiqueWhite
+        Me.ClassTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.ClassTxt.EnableAutoDragDrop = true
-        Me.ClassTxt.ForeColor = System.Drawing.Color.Black
+        Me.ClassTxt.ForeColor = System.Drawing.Color.White
         Me.ClassTxt.HideSelection = false
         Me.ClassTxt.Location = New System.Drawing.Point(309, 19)
         Me.ClassTxt.Name = "ClassTxt"
         Me.ClassTxt.ShowSelectionMargin = true
-        Me.ClassTxt.Size = New System.Drawing.Size(512, 642)
+        Me.ClassTxt.Size = New System.Drawing.Size(512, 658)
         Me.ClassTxt.TabIndex = 33
         Me.ClassTxt.Text = ""
         '
@@ -563,24 +436,14 @@
         Me.TreeView1.Size = New System.Drawing.Size(473, 125)
         Me.TreeView1.TabIndex = 32
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(6, 651)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(297, 46)
-        Me.GroupBox2.TabIndex = 31
-        Me.GroupBox2.TabStop = false
-        Me.GroupBox2.Text = "Language"
-        '
         'ComboBox1
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.Bisque
+        Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
         Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.ForeColor = System.Drawing.Color.White
         Me.ComboBox1.FormattingEnabled = true
         Me.ComboBox1.Items.AddRange(New Object() {"VBNet", "CSharp", "Python", "Php", "Cpp", "Java", "Arduino_C", "Arduino_Java"})
-        Me.ComboBox1.Location = New System.Drawing.Point(94, 19)
+        Me.ComboBox1.Location = New System.Drawing.Point(88, 8)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(111, 21)
         Me.ComboBox1.TabIndex = 0
@@ -605,33 +468,33 @@
         'NewToolStripMenuItem
         '
         Me.NewToolStripMenuItem.Name = "NewToolStripMenuItem"
-        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NewToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.NewToolStripMenuItem.Text = "&New.."
         '
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Enabled = false
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.OpenToolStripMenuItem.Text = "Open.."
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.SaveToolStripMenuItem.Text = "&Save.."
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.SaveAsToolStripMenuItem.Text = "S&ave as.."
         '
         'ImportFromToolStripMenuItem
         '
         Me.ImportFromToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.XmlToolStripMenuItem, Me.CsvToolStripMenuItem, Me.PythonDictToolStripMenuItem, Me.ToolStripMenuItem4})
         Me.ImportFromToolStripMenuItem.Name = "ImportFromToolStripMenuItem"
-        Me.ImportFromToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ImportFromToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ImportFromToolStripMenuItem.Text = "Import from.."
         '
         'XmlToolStripMenuItem
@@ -665,7 +528,7 @@
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.ExitToolStripMenuItem.Text = "&Exit"
         '
         'EditToolStripMenuItem
@@ -811,12 +674,221 @@
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(25, 20)
         Me.ToolStripMenuItem2.Text = "8"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Location = New System.Drawing.Point(6, 517)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(296, 130)
+        Me.Panel2.TabIndex = 34
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(51,Byte),Integer), CType(CType(51,Byte),Integer), CType(CType(55,Byte),Integer))
+        Me.Panel3.Controls.Add(Me.CheckBox15)
+        Me.Panel3.Controls.Add(Me.CheckBox13)
+        Me.Panel3.Controls.Add(Me.CheckBox12)
+        Me.Panel3.Controls.Add(Me.CheckBox11)
+        Me.Panel3.Controls.Add(Me.CheckBox14)
+        Me.Panel3.Controls.Add(Me.CheckBox10)
+        Me.Panel3.Controls.Add(Me.CheckBox9)
+        Me.Panel3.Controls.Add(Me.CheckBox8)
+        Me.Panel3.Controls.Add(Me.CheckBox7)
+        Me.Panel3.Controls.Add(Me.CheckBox6)
+        Me.Panel3.Location = New System.Drawing.Point(1, 1)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(294, 128)
+        Me.Panel3.TabIndex = 35
+        '
+        'CheckBox15
+        '
+        Me.CheckBox15.AutoSize = true
+        Me.CheckBox15.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox15.Location = New System.Drawing.Point(213, 102)
+        Me.CheckBox15.Name = "CheckBox15"
+        Me.CheckBox15.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox15.TabIndex = 38
+        Me.CheckBox15.Text = "..."
+        Me.CheckBox15.UseVisualStyleBackColor = true
+        '
+        'CheckBox13
+        '
+        Me.CheckBox13.AutoSize = true
+        Me.CheckBox13.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox13.Location = New System.Drawing.Point(213, 79)
+        Me.CheckBox13.Name = "CheckBox13"
+        Me.CheckBox13.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox13.TabIndex = 39
+        Me.CheckBox13.Text = "..."
+        Me.CheckBox13.UseVisualStyleBackColor = true
+        '
+        'CheckBox12
+        '
+        Me.CheckBox12.AutoSize = true
+        Me.CheckBox12.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox12.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox12.Location = New System.Drawing.Point(196, 10)
+        Me.CheckBox12.Name = "CheckBox12"
+        Me.CheckBox12.Size = New System.Drawing.Size(52, 17)
+        Me.CheckBox12.TabIndex = 37
+        Me.CheckBox12.Text = "Proxy"
+        Me.CheckBox12.UseVisualStyleBackColor = true
+        '
+        'CheckBox11
+        '
+        Me.CheckBox11.AutoSize = true
+        Me.CheckBox11.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox11.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox11.Location = New System.Drawing.Point(179, 33)
+        Me.CheckBox11.Name = "CheckBox11"
+        Me.CheckBox11.Size = New System.Drawing.Size(69, 17)
+        Me.CheckBox11.TabIndex = 36
+        Me.CheckBox11.Text = "Observer"
+        Me.CheckBox11.UseVisualStyleBackColor = true
+        '
+        'CheckBox14
+        '
+        Me.CheckBox14.AutoSize = true
+        Me.CheckBox14.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox14.Location = New System.Drawing.Point(114, 102)
+        Me.CheckBox14.Name = "CheckBox14"
+        Me.CheckBox14.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox14.TabIndex = 33
+        Me.CheckBox14.Text = "..."
+        Me.CheckBox14.UseVisualStyleBackColor = true
+        '
+        'CheckBox10
+        '
+        Me.CheckBox10.AutoSize = true
+        Me.CheckBox10.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox10.Location = New System.Drawing.Point(213, 56)
+        Me.CheckBox10.Name = "CheckBox10"
+        Me.CheckBox10.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox10.TabIndex = 35
+        Me.CheckBox10.Text = "..."
+        Me.CheckBox10.UseVisualStyleBackColor = true
+        '
+        'CheckBox9
+        '
+        Me.CheckBox9.AutoSize = true
+        Me.CheckBox9.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox9.Location = New System.Drawing.Point(114, 79)
+        Me.CheckBox9.Name = "CheckBox9"
+        Me.CheckBox9.Size = New System.Drawing.Size(35, 17)
+        Me.CheckBox9.TabIndex = 34
+        Me.CheckBox9.Text = "..."
+        Me.CheckBox9.UseVisualStyleBackColor = true
+        '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = true
+        Me.CheckBox8.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox8.Location = New System.Drawing.Point(46, 56)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(103, 17)
+        Me.CheckBox8.TabIndex = 32
+        Me.CheckBox8.Text = "Abstract Factory"
+        Me.CheckBox8.UseVisualStyleBackColor = true
+        '
+        'CheckBox7
+        '
+        Me.CheckBox7.AutoSize = true
+        Me.CheckBox7.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox7.Location = New System.Drawing.Point(49, 33)
+        Me.CheckBox7.Name = "CheckBox7"
+        Me.CheckBox7.Size = New System.Drawing.Size(100, 17)
+        Me.CheckBox7.TabIndex = 31
+        Me.CheckBox7.Text = "Factory Method"
+        Me.CheckBox7.UseVisualStyleBackColor = true
+        '
+        'CheckBox6
+        '
+        Me.CheckBox6.AutoSize = true
+        Me.CheckBox6.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.CheckBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.CheckBox6.Location = New System.Drawing.Point(79, 10)
+        Me.CheckBox6.Name = "CheckBox6"
+        Me.CheckBox6.Size = New System.Drawing.Size(70, 17)
+        Me.CheckBox6.TabIndex = 30
+        Me.CheckBox6.Text = "Singleton"
+        Me.CheckBox6.UseVisualStyleBackColor = true
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = true
+        Me.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label9.Location = New System.Drawing.Point(10, 507)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(82, 13)
+        Me.Label9.TabIndex = 18
+        Me.Label9.Text = "Design Patterns"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(122,Byte),Integer), CType(CType(204,Byte),Integer))
+        Me.Panel4.Controls.Add(Me.Panel5)
+        Me.Panel4.Location = New System.Drawing.Point(6, 662)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(296, 47)
+        Me.Panel4.TabIndex = 36
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(51,Byte),Integer), CType(CType(51,Byte),Integer), CType(CType(55,Byte),Integer))
+        Me.Panel5.Controls.Add(Me.ComboBox1)
+        Me.Panel5.Location = New System.Drawing.Point(1, 1)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(294, 45)
+        Me.Panel5.TabIndex = 35
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = true
+        Me.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label10.Location = New System.Drawing.Point(11, 651)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(55, 13)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "Language"
+        '
+        'FieldsTxt
+        '
+        Me.FieldsTxt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.FieldsTxt.AutoWordSelection = true
+        Me.FieldsTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
+        Me.FieldsTxt.EnableAutoDragDrop = true
+        Me.FieldsTxt.ForeColor = System.Drawing.Color.White
+        Me.FieldsTxt.HideSelection = false
+        Me.FieldsTxt.Location = New System.Drawing.Point(6, 182)
+        Me.FieldsTxt.Name = "FieldsTxt"
+        Me.FieldsTxt.ShowSelectionMargin = true
+        Me.FieldsTxt.Size = New System.Drawing.Size(297, 161)
+        Me.FieldsTxt.TabIndex = 38
+        Me.FieldsTxt.Text = "Action#single"&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdi#single"&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdu#Integer"&Global.Microsoft.VisualBasic.ChrW(10)&"Complaining#Double"&Global.Microsoft.VisualBasic.ChrW(10)&"P"& _ 
+    "riority#Boolean"&Global.Microsoft.VisualBasic.ChrW(10)&"Size#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Targeti#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Targetu#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Timer#single"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(827, 728)
+        Me.ClientSize = New System.Drawing.Size(827, 744)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
@@ -824,18 +896,19 @@
         Me.MinimumSize = New System.Drawing.Size(843, 668)
         Me.Name = "FormMain"
         Me.Text = "Class Maker  |  A0.0.1 #"
-        Me.GroupBox1.ResumeLayout(false)
-        Me.GroupBox1.PerformLayout
         Me.Panel1.ResumeLayout(false)
         Me.Panel1.PerformLayout
-        Me.GroupBox2.ResumeLayout(false)
         Me.MenuStrip1.ResumeLayout(false)
         Me.MenuStrip1.PerformLayout
+        Me.Panel2.ResumeLayout(false)
+        Me.Panel3.ResumeLayout(false)
+        Me.Panel3.PerformLayout
+        Me.Panel4.ResumeLayout(false)
+        Me.Panel5.ResumeLayout(false)
         Me.ResumeLayout(false)
         Me.PerformLayout
 
 End Sub
-        Friend WithEvents FieldsTxt As TextBox
         Friend WithEvents Button1 As Button
         Friend WithEvents F4CreatorsTxt As TextBox
         Friend WithEvents InheritsTxt As TextBox
@@ -858,17 +931,6 @@ End Sub
         Friend WithEvents Button3 As Button
         Friend WithEvents Button4 As Button
         Friend WithEvents Button5 As Button
-        Friend WithEvents CheckBox6 As CheckBox
-        Friend WithEvents CheckBox7 As CheckBox
-        Friend WithEvents CheckBox8 As CheckBox
-        Friend WithEvents CheckBox9 As CheckBox
-        Friend WithEvents CheckBox10 As CheckBox
-        Friend WithEvents CheckBox11 As CheckBox
-        Friend WithEvents CheckBox12 As CheckBox
-        Friend WithEvents CheckBox13 As CheckBox
-        Friend WithEvents CheckBox14 As CheckBox
-        Friend WithEvents CheckBox15 As CheckBox
-        Friend WithEvents GroupBox1 As GroupBox
         Friend WithEvents Panel1 As Panel
         Friend WithEvents MenuStrip1 As MenuStrip
         Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
@@ -877,7 +939,6 @@ End Sub
         Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents HelpsToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-        Friend WithEvents GroupBox2 As GroupBox
         Friend WithEvents ComboBox1 As ComboBox
         Friend WithEvents ExitToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents UndoToolStripMenuItem As ToolStripMenuItem
@@ -909,5 +970,22 @@ End Sub
         Friend WithEvents PythonDictToolStripMenuItem As ToolStripMenuItem
         Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
         Friend WithEvents GeneralNamingConventionMSDNToolStripMenuItem As ToolStripMenuItem
+        Friend WithEvents Panel4 As Panel
+        Friend WithEvents Panel5 As Panel
+        Friend WithEvents Label9 As Label
+        Friend WithEvents Panel2 As Panel
+        Friend WithEvents Panel3 As Panel
+        Friend WithEvents CheckBox15 As CheckBox
+        Friend WithEvents CheckBox13 As CheckBox
+        Friend WithEvents CheckBox12 As CheckBox
+        Friend WithEvents CheckBox11 As CheckBox
+        Friend WithEvents CheckBox14 As CheckBox
+        Friend WithEvents CheckBox10 As CheckBox
+        Friend WithEvents CheckBox9 As CheckBox
+        Friend WithEvents CheckBox8 As CheckBox
+        Friend WithEvents CheckBox7 As CheckBox
+        Friend WithEvents CheckBox6 As CheckBox
+        Friend WithEvents FieldsTxt As RichTextBox
+        Friend WithEvents Label10 As Label
     End Class
 End Namespace
