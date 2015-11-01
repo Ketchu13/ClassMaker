@@ -25,7 +25,6 @@
         Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.F4CreatorsTxt = New System.Windows.Forms.TextBox()
         Me.InheritsTxt = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -102,6 +101,7 @@
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.FieldsTxt = New System.Windows.Forms.RichTextBox()
+        Me.F4CreatorsTxt = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout
         Me.MenuStrip1.SuspendLayout
         Me.Panel2.SuspendLayout
@@ -122,19 +122,6 @@
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Write Class"
         Me.Button1.UseVisualStyleBackColor = true
-        '
-        'F4CreatorsTxt
-        '
-        Me.F4CreatorsTxt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
-        Me.F4CreatorsTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
-        Me.F4CreatorsTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.F4CreatorsTxt.ForeColor = System.Drawing.Color.White
-        Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 380)
-        Me.F4CreatorsTxt.Multiline = true
-        Me.F4CreatorsTxt.Name = "F4CreatorsTxt"
-        Me.F4CreatorsTxt.Size = New System.Drawing.Size(297, 105)
-        Me.F4CreatorsTxt.TabIndex = 3
-        Me.F4CreatorsTxt.Text = "Targetu#single;Timer#single"
         '
         'InheritsTxt
         '
@@ -377,6 +364,7 @@
             Or System.Windows.Forms.AnchorStyles.Left)  _
             Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(51,Byte),Integer), CType(CType(51,Byte),Integer), CType(CType(55,Byte),Integer))
+        Me.Panel1.Controls.Add(Me.F4CreatorsTxt)
         Me.Panel1.Controls.Add(Me.FieldsTxt)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.Panel4)
@@ -401,7 +389,6 @@
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.InheritsTxt)
-        Me.Panel1.Controls.Add(Me.F4CreatorsTxt)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Button1)
@@ -883,6 +870,23 @@
         Me.FieldsTxt.Text = "Action#single"&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdi#single"&Global.Microsoft.VisualBasic.ChrW(10)&"ComplainNeedIdu#Integer"&Global.Microsoft.VisualBasic.ChrW(10)&"Complaining#Double"&Global.Microsoft.VisualBasic.ChrW(10)&"P"& _ 
     "riority#Boolean"&Global.Microsoft.VisualBasic.ChrW(10)&"Size#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Targeti#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Targetu#single"&Global.Microsoft.VisualBasic.ChrW(10)&"Timer#single"
         '
+        'F4CreatorsTxt
+        '
+        Me.F4CreatorsTxt.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom)  _
+            Or System.Windows.Forms.AnchorStyles.Left)  _
+            Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.F4CreatorsTxt.AutoWordSelection = true
+        Me.F4CreatorsTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer), CType(CType(30,Byte),Integer))
+        Me.F4CreatorsTxt.EnableAutoDragDrop = true
+        Me.F4CreatorsTxt.ForeColor = System.Drawing.Color.White
+        Me.F4CreatorsTxt.HideSelection = false
+        Me.F4CreatorsTxt.Location = New System.Drawing.Point(6, 380)
+        Me.F4CreatorsTxt.Name = "F4CreatorsTxt"
+        Me.F4CreatorsTxt.ShowSelectionMargin = true
+        Me.F4CreatorsTxt.Size = New System.Drawing.Size(297, 105)
+        Me.F4CreatorsTxt.TabIndex = 39
+        Me.F4CreatorsTxt.Text = "Targetu#single;Timer#single"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -910,7 +914,6 @@
 
 End Sub
         Friend WithEvents Button1 As Button
-        Friend WithEvents F4CreatorsTxt As TextBox
         Friend WithEvents InheritsTxt As TextBox
         Friend WithEvents Label1 As Label
         Friend WithEvents Label2 As Label
@@ -987,5 +990,6 @@ End Sub
         Friend WithEvents CheckBox6 As CheckBox
         Friend WithEvents FieldsTxt As RichTextBox
         Friend WithEvents Label10 As Label
+        Friend WithEvents F4CreatorsTxt As RichTextBox
     End Class
 End Namespace

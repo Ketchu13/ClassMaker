@@ -103,6 +103,7 @@ Public Class Utils
             SaveThisClassAs(thisClassTxtBx, thisClassName)
         Else
             thisClassTxtBx.SaveFile(meCurrentFile, RichTextBoxStreamType.PlainText)
+            thisClassTxtBx.
         End If
     End Sub
 
